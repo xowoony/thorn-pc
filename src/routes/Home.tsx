@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 const Container = styled.div`
   height: 100%;
 `;
@@ -12,8 +11,26 @@ const Main = styled.main`
 
 const Item = styled.div`
   border: 0.0625rem solid white;
+  margin: 0.2rem 0.1rem;
   width: 4.5rem;
   height: 5rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+`;
+
+const Thc = styled.img`
+  width: 3.5rme;
+  height: 3.5rem;
+`;
+
+const Text = styled.div`
+  font-size: 0.8rem;
+  font-weight: 100;
+  margin-top: 0.5rem;
+  font-family: 'Cormorant Garamond', serif;
 `;
 
 const Footer = styled.footer`
@@ -43,7 +60,8 @@ function Home() {
     <Container>
       <Main>
         <Item>
-          <img src="d.jpg" alt="" />
+          <Thc src="d.jpg" alt="" />
+          <Text>Thorn Coin</Text>
         </Item>
       </Main>
       <Footer>2</Footer>

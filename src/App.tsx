@@ -41,7 +41,6 @@ html{
 body {
   line-height: 1;
   font-weight: 600;
-  height: 100%;
   font-family: 'Montserrat', sans-serif;
   background-color:${(props) => props.theme.bgColor};
   color:${(props) => props.theme.textColor};
