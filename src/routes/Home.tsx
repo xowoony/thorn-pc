@@ -40,6 +40,21 @@ const Text = styled.div`
   font-family: "Cormorant Garamond", serif;
 `;
 
+const PopupContainer = styled.div`
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+`;
+
+const ThcPopup = styled.div`
+  background-color: white;
+  width: 30rem;
+  border: 0.0625rem solid rgb(0, 0, 0);
+  height: 20rem;
+`;
+
 const Footer = styled.footer`
   background-color: rgb(186 186 186);
   box-shadow: 0px 4px 3px 7px #ffffff;
@@ -66,7 +81,7 @@ function Home() {
   const [showPopup, setShowPopup] = useState(false);
   const onDblClick = (event: React.MouseEvent<HTMLDivElement>) => {
     setShowPopup(true);
-  }
+  };
 
   return (
     <Container>
@@ -75,7 +90,11 @@ function Home() {
           <Thc src="d.jpg" alt="" />
           <Text>Thorn Coin</Text>
         </Item>
-        {showPopup ? (<div>짜잔</div>) : null}
+        {showPopup ? (
+          <PopupContainer>
+            <ThcPopup>dd</ThcPopup>
+          </PopupContainer>
+        ) : null}
       </Main>
       <Footer>2</Footer>
     </Container>
