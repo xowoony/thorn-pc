@@ -1,7 +1,19 @@
 import styled from "styled-components";
 
+
 const Container = styled.div`
   height: 100%;
+`;
+
+const Main = styled.main`
+  width: 100%;
+  height: 100%;
+`;
+
+const Item = styled.div`
+  border: 0.0625rem solid white;
+  width: 4.5rem;
+  height: 5rem;
 `;
 
 const Footer = styled.footer`
@@ -29,7 +41,11 @@ const Footer = styled.footer`
 function Home() {
   return (
     <Container>
-      <div>1</div>
+      <Main>
+        <Item>
+          <img src="d.jpg" alt="" />
+        </Item>
+      </Main>
       <Footer>2</Footer>
     </Container>
   );
