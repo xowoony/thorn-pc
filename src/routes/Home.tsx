@@ -49,10 +49,49 @@ const PopupContainer = styled.div`
 `;
 
 const ThcPopup = styled.div`
+  overflow: scroll;
+  margin-top: 3rem;
   background-color: white;
-  width: 30rem;
-  border: 0.0625rem solid rgb(0, 0, 0);
-  height: 20rem;
+  width: 45rem;
+  height: 29rem;
+  color: black;
+`;
+
+const ThcHeader = styled.header`
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 45rem;
+  font-family: "Cormorant Garamond", serif;
+  color: white;
+  width: 45rem;
+  height: 2rem;
+  background-color: #b8b8b8;
+  position: fixed;
+  padding: 0.2rem;
+`;
+
+const ThcTitle = styled.div`
+  padding: 0.1rem;
+  height: 1.7rem;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #010169;
+  width: 100%;
+  font-size: 0.7rem;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-left: 0.5rem;
+`;
+
+const TextContainer = styled.div`
+  margin-top: 2rem;
+  padding: 0.2rem;
 `;
 
 const Footer = styled.footer`
@@ -79,20 +118,29 @@ const Footer = styled.footer`
 
 function Home() {
   const [showPopup, setShowPopup] = useState(false);
-  const onDblClick = (event: React.MouseEvent<HTMLDivElement>) => {
+  const onThcDblClick = (event: React.MouseEvent<HTMLDivElement>) => {
     setShowPopup(true);
+    event.preventDefault();
   };
 
   return (
     <Container>
       <Main>
-        <Item onDoubleClick={onDblClick}>
+        <Item onDoubleClick={onThcDblClick}>
           <Thc src="d.jpg" alt="" />
           <Text>Thorn Coin</Text>
         </Item>
         {showPopup ? (
           <PopupContainer>
-            <ThcPopup>dd</ThcPopup>
+            <ThcPopup>
+              <ThcHeader>
+                <ThcTitle>Thorn Coin</ThcTitle>
+              </ThcHeader>
+              <TextContainer>
+                <h1>정소운 천재v</h1>
+                
+              </TextContainer>
+            </ThcPopup>
           </PopupContainer>
         ) : null}
       </Main>
