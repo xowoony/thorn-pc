@@ -63,15 +63,19 @@ const Footer = styled.footer`
 `;
 
 function Home() {
-
+  const [showPopup, setShowPopup] = useState(false);
+  const onDblClick = (event: React.MouseEvent<HTMLDivElement>) => {
+    setShowPopup(true);
+  }
 
   return (
     <Container>
       <Main>
-        <Item>
+        <Item onDoubleClick={onDblClick}>
           <Thc src="d.jpg" alt="" />
           <Text>Thorn Coin</Text>
         </Item>
+        {showPopup ? (<div>짜잔</div>) : null}
       </Main>
       <Footer>2</Footer>
     </Container>
