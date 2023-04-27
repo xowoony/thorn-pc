@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import "../routes/Home.css";
+import { useState } from "react";
 
 const Container = styled.div`
   height: 100%;
@@ -10,27 +12,32 @@ const Main = styled.main`
 `;
 
 const Item = styled.div`
-  border: 0.0625rem solid white;
   margin: 0.2rem 0.1rem;
-  width: 4.5rem;
-  height: 5rem;
+  width: 5rem;
+  height: 5.2rem;
+  -webkit-box-align: center;
   align-items: center;
   display: flex;
   flex-direction: column;
+  -webkit-box-pack: center;
   justify-content: center;
-  
+  &:hover {
+    background-color: #00000059;
+    border: 0.0625rem dotted black;
+  }
 `;
 
 const Thc = styled.img`
   width: 3.5rme;
   height: 3.5rem;
+  padding: 0.15rem;
 `;
 
 const Text = styled.div`
   font-size: 0.8rem;
   font-weight: 100;
   margin-top: 0.5rem;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
 `;
 
 const Footer = styled.footer`
@@ -56,6 +63,8 @@ const Footer = styled.footer`
 `;
 
 function Home() {
+
+
   return (
     <Container>
       <Main>
