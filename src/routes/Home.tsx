@@ -92,7 +92,15 @@ const ThcTitle = styled.div`
   padding-left: 0.5rem;
 `;
 
+const TtdTitle = styled.div`
+  font-size: 3rem;
+`;
+
 const TextContainer = styled.div`
+align-items:center;
+display: flex;
+flex-direction: column;
+justify-content: center;
   margin-top: 2rem;
   padding: 0.2rem;
 `;
@@ -211,10 +219,10 @@ function Home() {
           <PopupContainer>
             <Popup>
               <ThcHeader>
-                <ThcTitle>
+                <TtdTitle>
                   <div>THORN TO DO</div>
                   <CloseButton onClick={onTtdClosePopup}>X</CloseButton>
-                </ThcTitle>
+                </TtdTitle>
               </ThcHeader>
               <TextContainer>
                 <h1>THORN TO DO</h1>
@@ -233,11 +241,13 @@ function Home() {
                 </ThcTitle>
               </ThcHeader>
               <TextContainer>
-                <h1>프로젝트 소개</h1>
-                <hr />
-                <h3>잔이비어</h3>
-                <EtbImage src="etb-home.jpg" alt="" />
-                <Video controls src="etb-home.mp4"></Video>
+                <div>
+                  <h1>프로젝트 소개</h1>
+                  <hr />
+                  <h3>잔이비어</h3>
+                  <EtbImage src="etb-home.jpg" alt="" />
+                  <Video controls src="etb-home.mp4"></Video>
+                </div>
               </TextContainer>
             </Popup>
           </PopupContainer>
