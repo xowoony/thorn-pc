@@ -13,14 +13,13 @@ const Main = styled.main`
 `;
 
 const Item = styled.div`
-  margin: 0.2rem 0.1rem;
+  margin: 0.2rem 0.1rem 1rem;
   width: 5rem;
   height: 5.2rem;
   -webkit-box-align: center;
   align-items: center;
   display: flex;
   flex-direction: column;
-  -webkit-box-pack: center;
   justify-content: center;
   &:hover {
     background-color: #00000059;
@@ -42,6 +41,9 @@ const Text = styled.div`
 `;
 
 const PopupContainer = styled.div`
+  position: fixed;
+  top: 0;
+  margin-top: 3rem;
   width: 100%;
   align-items: center;
   display: flex;
@@ -132,22 +134,42 @@ const Footer = styled.footer`
 `;
 
 function Home() {
-  const [showPopup, setShowPopup] = useState(false);
+  // THC
+  const [showThcPopup, setshowThcPopup] = useState(false);
   const onThcDblClick = (event: React.MouseEvent<HTMLDivElement>) => {
-    setShowPopup(true);
+    setshowThcPopup(true);
   };
   const onClosePopup = () => {
-    setShowPopup(false);
-  }
+    setshowThcPopup(false);
+    setshowTtdPopup(false);
+  };
+
+  // THORN TO DO
+  const [showTtdPopup, setshowTtdPopup] = useState(false);
+  const onTtdDblClick = (event: React.MouseEvent<HTMLDivElement>) => {
+    setshowTtdPopup(true);
+  };
 
   return (
     <Container>
       <Main>
+        {/* 아이콘들 */}
         <Item onDoubleClick={onThcDblClick}>
           <Thc src="d.jpg" alt="" />
           <Text>Thorn Coin</Text>
         </Item>
-        {showPopup ? (
+        <Item onDoubleClick={onTtdDblClick}>
+          <Thc src="d.jpg" alt="" />
+          <Text>THORN TO DO</Text>
+        </Item>
+        <Item onDoubleClick={onThcDblClick}>
+          <Thc src="d.jpg" alt="" />
+          <Text>Thorn Coin</Text>
+        </Item>
+
+        {/* 각각의 아이콘 클릭했을 때 나타날 팝업창들 */}
+        {/* 1. Thorn Coin */}
+        {showThcPopup ? (
           <PopupContainer>
             <ThcPopup>
               <ThcHeader>
