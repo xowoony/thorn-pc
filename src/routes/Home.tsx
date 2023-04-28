@@ -52,6 +52,7 @@ const PopupContainer = styled.div`
 `;
 
 const Popup = styled.div`
+  box-shadow: 2px 3px 9px;
   overflow: scroll;
   margin-top: 3rem;
   background-color: white;
@@ -75,6 +76,10 @@ const ThcHeader = styled.header`
   padding: 0.2rem;
 `;
 
+const Title = styled.div`
+  font-weight: 100;
+`;
+
 const ThcTitle = styled.div`
   padding: 0.1rem;
   height: 1.7rem;
@@ -92,15 +97,11 @@ const ThcTitle = styled.div`
   padding-left: 0.5rem;
 `;
 
-const TtdTitle = styled.div`
-  font-size: 3rem;
-`;
-
 const TextContainer = styled.div`
-align-items:center;
-display: flex;
-flex-direction: column;
-justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin-top: 2rem;
   padding: 0.2rem;
 `;
@@ -117,6 +118,13 @@ const CloseButton = styled.button`
   font-size: 0.75rem;
   font-weight: 600;
   background-color: rgb(184, 184, 184);
+`;
+
+const H3 = styled.h3`
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  padding: 1rem;
 `;
 
 const EtbImage = styled.img`
@@ -204,7 +212,7 @@ function Home() {
             <Popup>
               <ThcHeader>
                 <ThcTitle>
-                  <div>Thorn Coin</div>
+                  <Title>Thorn Coin</Title>
                   <CloseButton onClick={onThcClosePopup}>X</CloseButton>
                 </ThcTitle>
               </ThcHeader>
@@ -219,10 +227,10 @@ function Home() {
           <PopupContainer>
             <Popup>
               <ThcHeader>
-                <TtdTitle>
-                  <div>THORN TO DO</div>
+                <ThcTitle>
+                  <Title>THORN TO DO</Title>
                   <CloseButton onClick={onTtdClosePopup}>X</CloseButton>
-                </TtdTitle>
+                </ThcTitle>
               </ThcHeader>
               <TextContainer>
                 <h1>THORN TO DO</h1>
@@ -236,7 +244,7 @@ function Home() {
             <Popup>
               <ThcHeader>
                 <ThcTitle>
-                  <div>잔이비어</div>
+                  <Title>잔이비어</Title>
                   <CloseButton onClick={onEtbClosePopup}>X</CloseButton>
                 </ThcTitle>
               </ThcHeader>
@@ -244,7 +252,7 @@ function Home() {
                 <div>
                   <h1>프로젝트 소개</h1>
                   <hr />
-                  <h3>잔이비어</h3>
+                  <H3>잔이비어</H3>
                   <EtbImage src="etb-home.jpg" alt="" />
                   <Video controls src="etb-home.mp4"></Video>
                 </div>
