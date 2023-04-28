@@ -135,8 +135,10 @@ function Home() {
   const [showPopup, setShowPopup] = useState(false);
   const onThcDblClick = (event: React.MouseEvent<HTMLDivElement>) => {
     setShowPopup(true);
-    event.preventDefault();
   };
+  const onClosePopup = () => {
+    setShowPopup(false);
+  }
 
   return (
     <Container>
@@ -151,7 +153,7 @@ function Home() {
               <ThcHeader>
                 <ThcTitle>
                   <div>Thorn Coin</div>
-                  <CloseButton>X</CloseButton>
+                  <CloseButton onClick={onClosePopup}>X</CloseButton>
                 </ThcTitle>
               </ThcHeader>
               <TextContainer>
