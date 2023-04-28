@@ -139,9 +139,8 @@ function Home() {
   const onThcDblClick = (event: React.MouseEvent<HTMLDivElement>) => {
     setshowThcPopup(true);
   };
-  const onClosePopup = () => {
+  const onThcClosePopup = () => {
     setshowThcPopup(false);
-    setshowTtdPopup(false);
   };
 
   // THORN TO DO
@@ -149,22 +148,34 @@ function Home() {
   const onTtdDblClick = (event: React.MouseEvent<HTMLDivElement>) => {
     setshowTtdPopup(true);
   };
+  const onTtdClosePopup = () => {
+    setshowTtdPopup(false);
+  };
+
+  // 잔이비어
+  const [showEtbPopup, setshowEtbPopup] = useState(false);
+  const onEtbDblClick = (event: React.MouseEvent<HTMLDivElement>) => {
+    setshowEtbPopup(true);
+  };
+  const onEtbClosePopup = () => {
+    setshowEtbPopup(false);
+  };
 
   return (
     <Container>
       <Main>
         {/* 아이콘들 */}
         <Item onDoubleClick={onThcDblClick}>
-          <Thc src="d.jpg" alt="" />
+          <Thc src="thc.jpg" alt="" />
           <Text>Thorn Coin</Text>
         </Item>
         <Item onDoubleClick={onTtdDblClick}>
-          <Thc src="d.jpg" alt="" />
+          <Thc src="ttd.jpg" alt="" />
           <Text>THORN TO DO</Text>
         </Item>
-        <Item onDoubleClick={onThcDblClick}>
-          <Thc src="d.jpg" alt="" />
-          <Text>Thorn Coin</Text>
+        <Item onDoubleClick={onEtbDblClick}>
+          <Thc src="etb.jpg" alt="" />
+          <Text>잔이비어</Text>
         </Item>
 
         {/* 각각의 아이콘 클릭했을 때 나타날 팝업창들 */}
@@ -175,11 +186,43 @@ function Home() {
               <ThcHeader>
                 <ThcTitle>
                   <div>Thorn Coin</div>
-                  <CloseButton onClick={onClosePopup}>X</CloseButton>
+                  <CloseButton onClick={onThcClosePopup}>X</CloseButton>
                 </ThcTitle>
               </ThcHeader>
               <TextContainer>
                 <h1>정소운 천재v</h1>
+              </TextContainer>
+            </ThcPopup>
+          </PopupContainer>
+        ) : null}
+        {/* THORN TO DO */}
+        {showTtdPopup ? (
+          <PopupContainer>
+            <ThcPopup>
+              <ThcHeader>
+                <ThcTitle>
+                  <div>THORN TO DO</div>
+                  <CloseButton onClick={onTtdClosePopup}>X</CloseButton>
+                </ThcTitle>
+              </ThcHeader>
+              <TextContainer>
+                <h1>THORN TO DO</h1>
+              </TextContainer>
+            </ThcPopup>
+          </PopupContainer>
+        ) : null}
+        {/* 잔이비어 */}
+        {showEtbPopup ? (
+          <PopupContainer>
+            <ThcPopup>
+              <ThcHeader>
+                <ThcTitle>
+                  <div>잔이비어</div>
+                  <CloseButton onClick={onEtbClosePopup}>X</CloseButton>
+                </ThcTitle>
+              </ThcHeader>
+              <TextContainer>
+                <h1>잔이비어</h1>
               </TextContainer>
             </ThcPopup>
           </PopupContainer>
