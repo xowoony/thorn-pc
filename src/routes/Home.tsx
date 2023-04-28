@@ -51,7 +51,7 @@ const PopupContainer = styled.div`
   justify-content: center;
 `;
 
-const ThcPopup = styled.div`
+const Popup = styled.div`
   overflow: scroll;
   margin-top: 3rem;
   background-color: white;
@@ -109,6 +109,17 @@ const CloseButton = styled.button`
   font-size: 0.75rem;
   font-weight: 600;
   background-color: rgb(184, 184, 184);
+`;
+
+const EtbImage = styled.img`
+  width: 36rem;
+  height: 16rem;
+`;
+
+const Video = styled.video`
+  width: 40rem;
+  height: 22rem;
+  margin: 1rem;
 `;
 
 const Footer = styled.footer`
@@ -182,7 +193,7 @@ function Home() {
         {/* 1. Thorn Coin */}
         {showThcPopup ? (
           <PopupContainer>
-            <ThcPopup>
+            <Popup>
               <ThcHeader>
                 <ThcTitle>
                   <div>Thorn Coin</div>
@@ -192,13 +203,13 @@ function Home() {
               <TextContainer>
                 <h1>정소운 천재v</h1>
               </TextContainer>
-            </ThcPopup>
+            </Popup>
           </PopupContainer>
         ) : null}
         {/* THORN TO DO */}
         {showTtdPopup ? (
           <PopupContainer>
-            <ThcPopup>
+            <Popup>
               <ThcHeader>
                 <ThcTitle>
                   <div>THORN TO DO</div>
@@ -208,13 +219,13 @@ function Home() {
               <TextContainer>
                 <h1>THORN TO DO</h1>
               </TextContainer>
-            </ThcPopup>
+            </Popup>
           </PopupContainer>
         ) : null}
         {/* 잔이비어 */}
         {showEtbPopup ? (
           <PopupContainer>
-            <ThcPopup>
+            <Popup>
               <ThcHeader>
                 <ThcTitle>
                   <div>잔이비어</div>
@@ -222,9 +233,13 @@ function Home() {
                 </ThcTitle>
               </ThcHeader>
               <TextContainer>
-                <h1>잔이비어</h1>
+                <h1>프로젝트 소개</h1>
+                <hr />
+                <h3>잔이비어</h3>
+                <EtbImage src="etb-home.jpg" alt="" />
+                <Video controls src="etb-home.mp4"></Video>
               </TextContainer>
-            </ThcPopup>
+            </Popup>
           </PopupContainer>
         ) : null}
       </Main>
