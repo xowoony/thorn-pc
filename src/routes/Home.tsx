@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import "../routes/Home.css";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const Container = styled.div`
@@ -94,6 +95,20 @@ const TextContainer = styled.div`
   padding: 0.2rem;
 `;
 
+const CloseButton = styled.button`
+  margin-left: auto;
+  margin-right: 0.2rem;
+  width: 1.2rem;
+  height: 1.1rem;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: rgb(184, 184, 184);
+`;
+
 const Footer = styled.footer`
   background-color: rgb(186 186 186);
   box-shadow: 0px 4px 3px 7px #ffffff;
@@ -134,11 +149,13 @@ function Home() {
           <PopupContainer>
             <ThcPopup>
               <ThcHeader>
-                <ThcTitle>Thorn Coin</ThcTitle>
+                <ThcTitle>
+                  <div>Thorn Coin</div>
+                  <CloseButton>X</CloseButton>
+                </ThcTitle>
               </ThcHeader>
               <TextContainer>
                 <h1>정소운 천재v</h1>
-                
               </TextContainer>
             </ThcPopup>
           </PopupContainer>
