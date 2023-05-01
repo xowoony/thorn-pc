@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import "../routes/Home.css";
-import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const Container = styled.div`
@@ -28,7 +27,7 @@ const Item = styled.div`
 `;
 
 const Thc = styled.img`
-  width: 3.5rme;
+  width: 3.5rem;
   height: 3.5rem;
   padding: 0.15rem;
 `;
@@ -106,6 +105,13 @@ const TextContainer = styled.div`
   padding: 0.2rem;
 `;
 
+const TextBox = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+
 const CloseButton = styled.button`
   margin-left: auto;
   margin-right: 0.2rem;
@@ -120,16 +126,64 @@ const CloseButton = styled.button`
   background-color: rgb(184, 184, 184);
 `;
 
-const H3 = styled.h3`
+const PjTitle = styled.h3`
   display: flex;
   justify-content: center;
   font-size: 2rem;
-  padding: 1rem;
+  padding: 2rem;
+  font-family: "Noto Serif KR", serif;
+`;
+
+// 프로젝트명, 개발인원, 프로젝트 설명..
+const SubTitleContainer = styled.div`
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: 0.5rem;
+  margin-top: 2rem;
+
+  font-weight: 600;
+`;
+
+const SubTitle = styled.div`
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  background-color: rgb(233 230 227);
+  margin-left: 3rem;
+  border-left: 6px solid rgb(0, 0, 0);
+`;
+
+const PjItrTitle = styled.h1`
+  margin-bottom: 1rem;
+  color: brown;
+  font-family: "Do Hyeon", sans-serif;
+  font-size: 1.6rem;
 `;
 
 const EtbImage = styled.img`
   width: 36rem;
   height: 16rem;
+  margin-bottom: 3rem;
+`;
+
+const Context = styled.div`
+  font-weight: 400;
+  width: 100%;
+  div {
+    margin-left: 7rem;
+  }
+`;
+
+const IntroSection = styled.div`
+  background-color: #fafafa;
+  margin-bottom: 5rem;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 const Video = styled.video`
@@ -139,6 +193,10 @@ const Video = styled.video`
 `;
 
 const Footer = styled.footer`
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   background-color: rgb(186 186 186);
   box-shadow: 0px 4px 3px 7px #ffffff;
   color: rgb(138, 138, 138);
@@ -149,12 +207,6 @@ const Footer = styled.footer`
   left: 0px;
   right: 0px;
   position: fixed;
-  -webkit-box-align: center;
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  justify-content: center;
   white-space: nowrap;
   z-index: 2;
   height: 2.3rem;
@@ -217,7 +269,12 @@ function Home() {
                 </ThcTitle>
               </ThcHeader>
               <TextContainer>
-                <h1>정소운 천재v</h1>
+                <TextBox>
+                  <PjTitle>Thorn Coin</PjTitle>
+                  <PjItrTitle>프로젝트 소개</PjItrTitle>
+                  <EtbImage src="etb-home.jpg" alt="" />
+                  <Video controls src="etb-home.mp4"></Video>
+                </TextBox>
               </TextContainer>
             </Popup>
           </PopupContainer>
@@ -249,13 +306,48 @@ function Home() {
                 </ThcTitle>
               </ThcHeader>
               <TextContainer>
-                <div>
-                  <h1>프로젝트 소개</h1>
-                  <hr />
-                  <H3>잔이비어</H3>
+                <TextBox>
+                  <PjTitle>잔이비어</PjTitle>
                   <EtbImage src="etb-home.jpg" alt="" />
+                  <PjItrTitle>프로젝트 소개</PjItrTitle>
+                  <IntroSection>
+                    <SubTitleContainer>
+                      <SubTitle>프로젝트명</SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>잔이비어</div>
+                    </Context>
+                    <SubTitleContainer>
+                      <SubTitle>개발 인원</SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>3인</div>
+                    </Context>
+                    <SubTitleContainer>
+                      <SubTitle>프로젝트 설명</SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>
+                        맥주만을 위한 커뮤니티를 기획 및 구현하여
+                        <br />
+                        새로운 소셜 네트워크를 구축한 서비스입니다.
+                        <br />
+                        맥주 관련 정보와 사용자 후기를 간편하게 조회할 수
+                        있으며,
+                        <br />
+                        인기 맥주 동향 파악과 더불어 사용자들 간의 모임 추진 등
+                        <br />
+                        다양한 커뮤니티 활동이 가능하게 구현하였습니다.
+                      </div>
+                    </Context>
+                    <SubTitleContainer></SubTitleContainer>
+                  </IntroSection>
+                  <PjItrTitle>구현영상 & 상세기여 설명</PjItrTitle>
+                  <SubTitleContainer>
+                    <SubTitle>Home</SubTitle>
+                  </SubTitleContainer>
                   <Video controls src="etb-home.mp4"></Video>
-                </div>
+                </TextBox>
               </TextContainer>
             </Popup>
           </PopupContainer>
