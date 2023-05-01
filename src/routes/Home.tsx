@@ -150,9 +150,9 @@ const SubTitleContainer = styled.div`
 const SubTitle = styled.div`
   font-size: 0.9rem;
   padding: 0.5rem;
-  background-color: rgb(233 230 227);
+  background-color: rgb(233, 230, 227);
   margin-left: 3rem;
-  border-left: 6px solid rgb(0, 0, 0);
+  border-left: 6px solid rgb(165 50 50);
 `;
 
 const PjItrTitle = styled.h1`
@@ -340,7 +340,35 @@ function Home() {
                         다양한 커뮤니티 활동이 가능하게 구현하였습니다.
                       </div>
                     </Context>
-                    <SubTitleContainer></SubTitleContainer>
+                    <SubTitleContainer>
+                      <SubTitle>기여한 부분</SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>
+                        프로젝트 팀장
+                        <br />
+                        잔이비어 프로젝트 아이디어 최초 제안
+                        <br />
+                        <br />
+                        프론트엔드<li>화면설계 전반</li>{" "}
+                        <li>전체 사이트 프론트 통일</li>
+                        <br />
+                        <br />
+                        백엔드
+                        <li>카카오 주소찾기 API를 활용한 회원가입 폼 구현</li>
+                        <br />
+                        <li>
+                          로그인, 로그아웃, 이메일 찾기, 비밀번호 재설정 구현
+                        </li>
+                        <br />
+                        <li>
+                          마이페이지(닉네임변경, 연락처변경, 주소변경,
+                          회원탈퇴)구현
+                        </li>
+                        <br />
+                        <li>맥주 소개 페이지 구현</li>
+                      </div>
+                    </Context>
                   </IntroSection>
                   <PjItrTitle>구현영상 & 상세기여 설명</PjItrTitle>
                   <SubTitleContainer>
