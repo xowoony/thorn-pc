@@ -55,7 +55,7 @@ const Popup = styled.div`
   overflow: scroll;
   margin-top: 3rem;
   background-color: white;
-  width: 45rem;
+  width: 50%;
   height: 29rem;
   color: black;
 `;
@@ -65,10 +65,9 @@ const ThcHeader = styled.header`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 45rem;
+  width: 50%;
   font-family: "Cormorant Garamond", serif;
   color: white;
-  width: 45rem;
   height: 2rem;
   background-color: #b8b8b8;
   position: fixed;
@@ -106,6 +105,7 @@ const TextContainer = styled.div`
 `;
 
 const TextBox = styled.div`
+  width: 100%;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -169,14 +169,18 @@ const EtbImage = styled.img`
 `;
 
 const Context = styled.div`
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: 400;
   width: 100%;
+  font-size: 0.9rem;
+  line-height: 25px;
   div {
     margin-left: 7rem;
   }
 `;
 
 const IntroSection = styled.div`
+  padding: 2rem 0;
   background-color: #fafafa;
   margin-bottom: 5rem;
   width: 100%;
@@ -187,8 +191,8 @@ const IntroSection = styled.div`
 `;
 
 const Video = styled.video`
-  width: 40rem;
-  height: 22rem;
+  width: 35rem;
+  height: 20rem;
   margin: 1rem;
 `;
 
@@ -328,16 +332,21 @@ function Home() {
                     </SubTitleContainer>
                     <Context>
                       <div>
-                        맥주만을 위한 커뮤니티를 기획 및 구현하여
+                        맥주를 좋아하는 사람들끼리 서로 소통하고
                         <br />
-                        새로운 소셜 네트워크를 구축한 서비스입니다.
+                        맥주에 대한 정보를 쉽게 얻을 수 있으며,
+                        <br />
+                        사용자 자체적으로 모임을 추진할 수 있는 서비스를
+                        개발해보고 싶었습니다.
+                        <br />
+                        오로지 맥주만을 위한 소통의 공간을 마련하였습니다.
                         <br />
                         맥주 관련 정보와 사용자 후기를 간편하게 조회할 수
                         있으며,
                         <br />
                         인기 맥주 동향 파악과 더불어 사용자들 간의 모임 추진 등
                         <br />
-                        다양한 커뮤니티 활동이 가능하게 구현하였습니다.
+                        다양한 커뮤니티 활동이 가능하도록 구현하였습니다.
                       </div>
                     </Context>
                     <SubTitleContainer>
@@ -345,35 +354,38 @@ function Home() {
                     </SubTitleContainer>
                     <Context>
                       <div>
-                        프로젝트 팀장
+                        <span>프로젝트 팀장</span>
                         <br />
-                        잔이비어 프로젝트 아이디어 최초 제안
+                        <span>프로젝트 아이디어 최초 제안</span>
                         <br />
                         <br />
-                        프론트엔드<li>화면설계 전반</li>{" "}
+                        <span>프론트엔드</span>
+                        <li>화면설계 전반</li>
                         <li>전체 사이트 프론트 통일</li>
                         <br />
                         <br />
-                        백엔드
+                        <span>백엔드</span>
                         <li>카카오 주소찾기 API를 활용한 회원가입 폼 구현</li>
-                        <br />
                         <li>
                           로그인, 로그아웃, 이메일 찾기, 비밀번호 재설정 구현
                         </li>
-                        <br />
                         <li>
                           마이페이지(닉네임변경, 연락처변경, 주소변경,
                           회원탈퇴)구현
                         </li>
-                        <br />
                         <li>맥주 소개 페이지 구현</li>
                       </div>
                     </Context>
                   </IntroSection>
                   <PjItrTitle>구현영상 & 상세기여 설명</PjItrTitle>
                   <SubTitleContainer>
-                    <SubTitle>Home</SubTitle>
+                    <SubTitle>HOME</SubTitle>
                   </SubTitleContainer>
+                  <Context>
+                    <div>
+                      기여한 부분 : index.html 페이지 프론트엔드 전반 사항
+                    </div>
+                  </Context>
                   <Video controls src="etb-home.mp4"></Video>
                 </TextBox>
               </TextContainer>
