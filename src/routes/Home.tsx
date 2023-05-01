@@ -102,7 +102,6 @@ const TextContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   margin-top: 2rem;
-  padding: 0.2rem;
 `;
 
 const TextBox = styled.div`
@@ -144,7 +143,6 @@ const SubTitleContainer = styled.div`
   justify-content: flex-start;
   margin-bottom: 0.5rem;
   margin-top: 2rem;
-
   font-weight: 600;
 `;
 
@@ -178,6 +176,9 @@ const Context = styled.div`
   div {
     margin-left: 7rem;
   }
+  span {
+    box-shadow: inset 0 -10px 0 #edcdd770;
+  }
 `;
 
 const IntroSection = styled.div`
@@ -195,6 +196,11 @@ const Video = styled.video`
   width: 35rem;
   height: 20rem;
   margin: 1rem;
+`;
+
+const RegisterImg = styled.img`
+  width: 35.5rem;
+  margin-left: 0.6rem;
 `;
 
 const Footer = styled.footer`
@@ -398,7 +404,9 @@ function Home() {
                     <Context>
                       <div>
                         [기여한 부분]
-                        <li style={{marginBottom: "0.5rem"}}>회원가입 부분 백엔드, 프론트엔드 전반 사항</li>
+                        <li style={{ marginBottom: "0.5rem" }}>
+                          회원가입 부분 백엔드, 프론트엔드 전반 사항
+                        </li>
                         <p style={{ textIndent: "1.2rem" }}>
                           사용자로부터 회원가입에 필요한 항목들을 입력한 후,
                         </p>
@@ -412,9 +420,35 @@ function Home() {
                           회원가입시 이메일 인증을 통해 코드를 받고 입력하여
                           가입할 수 있게 구현하였습니다.
                         </p>
+                        <p style={{ textIndent: "1.2rem" }}>
+                          비밀번호는 해싱되어 DB에 저장될 수 있도록 하였습니다.
+                        </p>
                       </div>
                     </Context>
-                    <Video controls src="etb-home.mp4"></Video>
+                    <Context>
+                      <div>
+                        <li
+                          style={{
+                            listStyleType: "number",
+                            textIndent: "1.2rem",
+                            marginTop: "2rem",
+                          }}
+                        >
+                          회원가입의 시작
+                        </li>
+                        <Video controls src="register1.mp4"></Video>
+                        <li
+                          style={{
+                            listStyleType: "number",
+                            textIndent: "1.2rem",
+                            marginTop: "2rem",
+                          }}
+                        >
+                          회원가입 요청 후 메일로 인증번호 전송
+                        </li>
+                        <RegisterImg src="register2.jpg"></RegisterImg>
+                      </div>
+                    </Context>
                   </IntroSection>
                 </TextBox>
               </TextContainer>
