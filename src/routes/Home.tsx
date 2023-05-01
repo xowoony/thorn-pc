@@ -61,6 +61,7 @@ const Popup = styled.div`
 `;
 
 const ThcHeader = styled.header`
+  z-index: 2;
   align-items: center;
   display: flex;
   flex-direction: row;
@@ -378,15 +379,43 @@ function Home() {
                     </Context>
                   </IntroSection>
                   <PjItrTitle>구현영상 & 상세기여 설명</PjItrTitle>
-                  <SubTitleContainer>
-                    <SubTitle>HOME</SubTitle>
-                  </SubTitleContainer>
-                  <Context>
-                    <div>
-                      기여한 부분 : index.html 페이지 프론트엔드 전반 사항
-                    </div>
-                  </Context>
-                  <Video controls src="etb-home.mp4"></Video>
+                  <IntroSection>
+                    {/* 1 */}
+                    <SubTitleContainer>
+                      <SubTitle>HOME</SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>
+                        [기여한 부분]
+                        <li>index.html 페이지 프론트엔드 전반 사항</li>
+                      </div>
+                    </Context>
+                    <Video controls src="etb-home.mp4"></Video>
+                    {/* 2 */}
+                    <SubTitleContainer>
+                      <SubTitle>시작하기 ▶ 회원가입</SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>
+                        [기여한 부분]
+                        <li style={{marginBottom: "0.5rem"}}>회원가입 부분 백엔드, 프론트엔드 전반 사항</li>
+                        <p style={{ textIndent: "1.2rem" }}>
+                          사용자로부터 회원가입에 필요한 항목들을 입력한 후,
+                        </p>
+                        <p style={{ textIndent: "1.2rem" }}>
+                          이미 가입한 사용자의 정보와 일치 하는 정보가 없을 경우
+                        </p>
+                        <p style={{ textIndent: "1.2rem" }}>
+                          정상적으로 회원가입이 될 수 있게 구현하였습니다.
+                        </p>
+                        <p style={{ textIndent: "1.2rem" }}>
+                          회원가입시 이메일 인증을 통해 코드를 받고 입력하여
+                          가입할 수 있게 구현하였습니다.
+                        </p>
+                      </div>
+                    </Context>
+                    <Video controls src="etb-home.mp4"></Video>
+                  </IntroSection>
                 </TextBox>
               </TextContainer>
             </Popup>
