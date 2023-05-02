@@ -237,6 +237,11 @@ const Footer = styled.footer`
     img {
       width: 1.3rem;
       height: 1.2rem;
+      margin-right: 0.4rem;
+    }
+    span {
+      font-weight: 600;
+      font-family: 'Gothic A1', sans-serif;
     }
   }
 `;
@@ -301,7 +306,7 @@ function Home() {
                 <TextBox>
                   <PjTitle>Thorn Coin</PjTitle>
                   <PjItrTitle>프로젝트 소개</PjItrTitle>
-                  <EtbImage src="etb-home.jpg" alt="" />
+                  <EtbImage src="thc-home.jpg" alt="" />
                   <Video controls src="etb-home.mp4"></Video>
                 </TextBox>
               </TextContainer>
