@@ -224,9 +224,12 @@ const Footer = styled.footer`
   z-index: 2;
   height: 2.3rem;
   button {
-    margin-left: 1rem;
-    width: 4rem;
-    height: 1.7rem;
+    border-left: 0.05rem solid white;
+    border-top: 0.05rem solid white;
+    background-color: transparent;
+    margin-left: 0.2rem;
+    width: 4.3rem;
+    height: 1.9rem;
     align-items: center;
     display: flex;
     flex-direction: row;
