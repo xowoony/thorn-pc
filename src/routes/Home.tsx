@@ -130,7 +130,6 @@ const PjTitle = styled.h3`
   display: flex;
   justify-content: center;
   font-size: 2rem;
-  padding: 2rem;
   font-family: "Noto Serif KR", serif;
   box-shadow: rgb(220 100 100 / 25%) 0px -15px 0px inset;
   margin-top: 3rem;
@@ -164,10 +163,10 @@ const PjItrTitle = styled.h1`
 `;
 
 const EtbImage = styled.img`
-    width: 36rem;
-    height: 16rem;
-    margin-bottom: 3rem;
-    margin-top: 3rem;
+  width: 36rem;
+  height: 16rem;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
 `;
 
 const Context = styled.div`
@@ -210,7 +209,7 @@ const Footer = styled.footer`
   align-items: center;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   background-color: rgb(186 186 186);
   box-shadow: 0px 4px 3px 7px #ffffff;
   color: rgb(138, 138, 138);
@@ -224,6 +223,19 @@ const Footer = styled.footer`
   white-space: nowrap;
   z-index: 2;
   height: 2.3rem;
+  button {
+    margin-left: 1rem;
+    width: 4rem;
+    height: 1.7rem;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    img {
+      width: 1.3rem;
+      height: 1.2rem;
+    }
+  }
 `;
 
 function Home() {
@@ -465,7 +477,7 @@ function Home() {
                     {/* 3 */}
                     <SubTitleContainer>
                       <SubTitle>시작하기 ▶ 로그인</SubTitle>
-                      <a href="https://xowoony.tistory.com/424">
+                      <a href="https://xowoony.tistory.com/424" target="_blank">
                         <span
                           style={{
                             marginLeft: "2rem",
@@ -508,7 +520,14 @@ function Home() {
           </PopupContainer>
         ) : null}
       </Main>
-      <Footer>2</Footer>
+      <Footer>
+        <div>
+          <button>
+            <img src="windows-logo.jpg" alt="" />
+            <span>시작</span>
+          </button>
+        </div>
+      </Footer>
     </Container>
   );
 }
