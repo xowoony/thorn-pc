@@ -132,6 +132,8 @@ const PjTitle = styled.h3`
   font-size: 2rem;
   padding: 2rem;
   font-family: "Noto Serif KR", serif;
+  box-shadow: rgb(220 100 100 / 25%) 0px -15px 0px inset;
+  margin-top: 3rem;
 `;
 
 // 프로젝트명, 개발인원, 프로젝트 설명..
@@ -162,9 +164,10 @@ const PjItrTitle = styled.h1`
 `;
 
 const EtbImage = styled.img`
-  width: 36rem;
-  height: 16rem;
-  margin-bottom: 3rem;
+    width: 36rem;
+    height: 16rem;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
 `;
 
 const Context = styled.div`
@@ -351,7 +354,8 @@ function Home() {
                         <br />
                         인기 맥주 동향 파악과 더불어 사용자들 간의 모임 추진 등
                         <br />
-                        다양한 커뮤니티 활동이 가능하도록 구현하여<br />
+                        다양한 커뮤니티 활동이 가능하도록 구현하여
+                        <br />
                         오로지 맥주만을 위한 소통의 공간을 마련하였습니다.
                       </div>
                     </Context>
@@ -446,6 +450,55 @@ function Home() {
                           회원가입 요청 후 메일로 인증번호 전송
                         </li>
                         <RegisterImg src="register2.jpg"></RegisterImg>
+                        <li
+                          style={{
+                            listStyleType: "number",
+                            textIndent: "1.2rem",
+                            marginTop: "2rem",
+                          }}
+                        >
+                          회원가입 완료
+                        </li>
+                        <Video controls src="register3.mp4"></Video>
+                      </div>
+                    </Context>
+                    {/* 3 */}
+                    <SubTitleContainer>
+                      <SubTitle>시작하기 ▶ 로그인</SubTitle>
+                      <a href="https://xowoony.tistory.com/424">
+                        <span
+                          style={{
+                            marginLeft: "2rem",
+                            fontSize: "0.7rem",
+                            boxShadow:
+                              "rgb(220 100 137 / 25%) 0px -10px 0px inset",
+                          }}
+                        >
+                          개발 블로그 기록 바로가기
+                        </span>
+                      </a>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>
+                        [기여한 부분]
+                        <li style={{ marginBottom: "0.5rem" }}>
+                          로그인 부분 백엔드, 프론트엔드 전반 사항
+                        </li>
+                        <p style={{ textIndent: "1.2rem" }}>
+                          사용자가 입력한 이메일과 비밀번호가 회원가입한 유저의
+                          이메일과 비밀번호와
+                        </p>
+                        <p style={{ textIndent: "1.2rem" }}>
+                          일치할 경우 로그인이 되도록 구현하였습니다.
+                        </p>
+                        <p style={{ textIndent: "1.2rem" }}>
+                          그 외의 이메일을 입력했거나 비밀번호가 틀렸을 경우
+                          로그인이 되지 않으며,
+                        </p>
+                        <p style={{ textIndent: "1.2rem" }}>
+                          로그인에 실패하였으니 다시 시도하라는 경고 메시지를
+                          띄우도록 조치하였습니다.
+                        </p>
                       </div>
                     </Context>
                   </IntroSection>
