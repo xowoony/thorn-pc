@@ -175,11 +175,17 @@ const Context = styled.div`
   width: 100%;
   font-size: 0.9rem;
   line-height: 25px;
+  p {
+    text-indent: 1.2rem;
+  }
   div {
     margin-left: 7rem;
   }
   span {
     box-shadow: inset 0 -10px 0 #edcdd770;
+  }
+  li {
+    margin-bottom: 0.5rem;
   }
 `;
 
@@ -240,8 +246,9 @@ const Footer = styled.footer`
       margin-right: 0.4rem;
     }
     span {
+      font-size: 0.88rem;
       font-weight: 600;
-      font-family: 'Gothic A1', sans-serif;
+      font-family: "Gothic A1", sans-serif;
     }
   }
 `;
@@ -295,13 +302,14 @@ function Home() {
         {/* 1. Thorn Coin */}
         {showThcPopup ? (
           <PopupContainer>
-            <Popup>
-              <ThcHeader>
+            <ThcHeader>
                 <ThcTitle>
                   <Title>Thorn Coin</Title>
                   <CloseButton onClick={onThcClosePopup}>X</CloseButton>
                 </ThcTitle>
               </ThcHeader>
+            <Popup>
+              
               <TextContainer>
                 <TextBox>
                   <PjTitle>Thorn Coin</PjTitle>
@@ -427,23 +435,19 @@ function Home() {
                     <Context>
                       <div>
                         [기여한 부분]
-                        <li style={{ marginBottom: "0.5rem" }}>
-                          회원가입 부분 백엔드, 프론트엔드 전반 사항
-                        </li>
-                        <p style={{ textIndent: "1.2rem" }}>
+                        <li>회원가입 부분 백엔드, 프론트엔드 전반 사항</li>
+                        <p>
                           사용자로부터 회원가입에 필요한 항목들을 입력받은 후,
                         </p>
-                        <p style={{ textIndent: "1.2rem" }}>
+                        <p>
                           이미 가입한 사용자의 정보와 일치 하는 정보가 없을 경우
                         </p>
-                        <p style={{ textIndent: "1.2rem" }}>
-                          정상적으로 회원가입이 될 수 있게 구현하였습니다.
-                        </p>
-                        <p style={{ textIndent: "1.2rem" }}>
+                        <p>정상적으로 회원가입이 될 수 있게 구현하였습니다.</p>
+                        <p>
                           회원가입시 이메일 인증을 통해 코드를 받고 입력하여
                           가입할 수 있게 구현하였습니다.
                         </p>
-                        <p style={{ textIndent: "1.2rem" }}>
+                        <p>
                           비밀번호는 해싱되어 DB에 저장될 수 있도록 하였습니다.
                         </p>
                       </div>
@@ -494,31 +498,91 @@ function Home() {
                               "rgb(220 100 137 / 25%) 0px -10px 0px inset",
                           }}
                         >
-                          개발 블로그 기록 바로가기
+                          개발 블로그 기록
                         </span>
                       </a>
                     </SubTitleContainer>
                     <Context>
                       <div>
                         [기여한 부분]
-                        <li style={{ marginBottom: "0.5rem" }}>
-                          로그인 부분 백엔드, 프론트엔드 전반 사항
-                        </li>
-                        <p style={{ textIndent: "1.2rem" }}>
+                        <li>로그인 부분 백엔드, 프론트엔드 전반 사항</li>
+                        <p>
                           사용자가 입력한 이메일과 비밀번호가 회원가입한 유저의
                           이메일과 비밀번호와
                         </p>
-                        <p style={{ textIndent: "1.2rem" }}>
-                          일치할 경우 로그인이 되도록 구현하였습니다.
-                        </p>
-                        <p style={{ textIndent: "1.2rem" }}>
+                        <p>일치할 경우 로그인이 되도록 구현하였습니다.</p>
+                        <p>
                           그 외의 이메일을 입력했거나 비밀번호가 틀렸을 경우
                           로그인이 되지 않으며,
                         </p>
-                        <p style={{ textIndent: "1.2rem" }}>
+                        <p>
                           로그인에 실패하였으니 다시 시도하라는 경고 메시지를
                           띄우도록 조치하였습니다.
                         </p>
+                      </div>
+                    </Context>
+                    {/* 4 */}
+                    <SubTitleContainer>
+                      <SubTitle>시작하기 ▶ 로그아웃</SubTitle>
+                      <a href="https://xowoony.tistory.com/425" target="_blank">
+                        <span
+                          style={{
+                            marginLeft: "2rem",
+                            fontSize: "0.7rem",
+                            boxShadow:
+                              "rgb(220 100 137 / 25%) 0px -10px 0px inset",
+                          }}
+                        >
+                          개발 블로그 기록
+                        </span>
+                      </a>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>
+                        [기여한 부분]
+                        <li>로그아웃 부분 백엔드, 프론트엔드 전반 사항</li>
+                        <p>
+                          로그아웃 버튼을 눌렀을 때 정상적으로 로그아웃이 되며,
+                        </p>
+                        <p>
+                          로그아웃 후 바로 로그인 페이지로 가도록
+                          구현하였습니다.
+                        </p>
+                        <Video controls src="logout.mp4"></Video>
+                      </div>
+                    </Context>
+                    {/* 5 닉네임 변경 */}
+                    <SubTitleContainer>
+                      <SubTitle>시작하기 ▶ 마이페이지 ▶ 닉네임 변경</SubTitle>
+                      <a href="https://xowoony.tistory.com/422" target="_blank">
+                        <span
+                          style={{
+                            marginLeft: "2rem",
+                            fontSize: "0.7rem",
+                            boxShadow:
+                              "rgb(220 100 137 / 25%) 0px -10px 0px inset",
+                          }}
+                        >
+                          개발 블로그 기록
+                        </span>
+                      </a>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>
+                        [기여한 부분]
+                        <li>닉네임 변경 부분 백엔드, 프론트엔드 전반 사항</li>
+                        <Video controls src="nick-change.mp4"></Video>
+                      </div>
+                    </Context>
+                    {/* 6 연락처 변경 */}
+                    <SubTitleContainer>
+                      <SubTitle>시작하기 ▶ 마이페이지 ▶ 연락처 변경</SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>
+                        [기여한 부분]
+                        <li>연락처 변경 부분 백엔드, 프론트엔드 전반 사항</li>
+                        <Video controls src="contact-change.mp4"></Video>
                       </div>
                     </Context>
                   </IntroSection>
