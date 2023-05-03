@@ -61,7 +61,7 @@ const Popup = styled.div`
 `;
 
 const ThcHeader = styled.header`
-    padding-bottom: 0.2rem;
+  padding-bottom: 0.2rem;
   margin-bottom: 28.05rem;
   z-index: 2;
   align-items: center;
@@ -168,7 +168,7 @@ const EtbImage = styled.img`
   width: 36rem;
   height: 16rem;
   margin-bottom: 3rem;
-  margin-top: 3rem;
+  margin-top: 1rem;
 `;
 
 const Context = styled.div`
@@ -351,6 +351,47 @@ function Home() {
               <TextContainer>
                 <TextBox>
                   <PjTitle>잔이비어</PjTitle>
+                  <div
+                    style={{
+                      height: "3rem",
+                      width: "10rem",
+                      marginTop: "1rem",
+                      alignItems: " center",
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "center",
+                    }}
+                  >
+                    {/* 깃허브 바로가기 */}
+                    <a
+                      style={{
+                        width: "3rem",
+                        height: "3rem",
+                        marginRight: "2rem",
+                      }}
+                      href="https://github.com/xowoony/etb-public"
+                      target="_blank"
+                    >
+                      <img
+                        style={{ width: "3rem", height: "3rem" }}
+                        src="github.jpg"
+                        alt=""
+                      />
+                    </a>
+                    {/* 잔이비어 홈페이지 바로가기 */}
+                    <a
+                      style={{ width: "3rem", height: "3rem" }}
+                      href="https://etb.xowoony.dev/"
+                      target="_blank"
+                    >
+                      <img
+                        style={{ width: "3rem", height: "3rem" }}
+                        src="etb.jpg"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+
                   <EtbImage src="etb-home.jpg" alt="" />
                   <PjItrTitle>프로젝트 소개</PjItrTitle>
                   <IntroSection>
