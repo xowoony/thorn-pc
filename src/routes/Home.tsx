@@ -42,7 +42,7 @@ const Text = styled.div`
 const PopupContainer = styled.div`
   position: fixed;
   top: 0;
-  margin-top: 3rem;
+  margin-top: 4.5rem;
   width: 100%;
   align-items: center;
   display: flex;
@@ -61,6 +61,8 @@ const Popup = styled.div`
 `;
 
 const ThcHeader = styled.header`
+    padding-bottom: 0.2rem;
+  margin-bottom: 28.05rem;
   z-index: 2;
   align-items: center;
   display: flex;
@@ -339,13 +341,13 @@ function Home() {
         {/* 잔이비어 */}
         {showEtbPopup ? (
           <PopupContainer>
+            <ThcHeader>
+              <ThcTitle>
+                <Title>잔이비어</Title>
+                <CloseButton onClick={onEtbClosePopup}>X</CloseButton>
+              </ThcTitle>
+            </ThcHeader>
             <Popup>
-              <ThcHeader>
-                <ThcTitle>
-                  <Title>잔이비어</Title>
-                  <CloseButton onClick={onEtbClosePopup}>X</CloseButton>
-                </ThcTitle>
-              </ThcHeader>
               <TextContainer>
                 <TextBox>
                   <PjTitle>잔이비어</PjTitle>
@@ -654,6 +656,25 @@ function Home() {
                         [기여한 부분]
                         <li>없음</li>
                         <Video controls src="review.mp4"></Video>
+                      </div>
+                    </Context>
+                    {/* 11 FESTIVAL*/}
+                    <SubTitleContainer>
+                      <SubTitle>FESTIVAL</SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>
+                        [기여한 부분]
+                        <li>FESTIVAL 페이지 프론트엔드 전반 사항</li>
+                        <p>
+                          FESTIVAL 대문 페이지에 들어갔을 때 국내 맥주 페스티벌
+                          정보를 한눈에 볼 수 있게
+                        </p>
+                        <p>
+                          GRID 형식으로 포스터를 정렬하여 사용자 접근성과
+                          편의성을 높였습니다.
+                        </p>
+                        <Video controls src="festival.mp4"></Video>
                       </div>
                     </Context>
                   </IntroSection>
