@@ -158,7 +158,7 @@ const SubTitle = styled.div`
 `;
 
 const PjItrTitle = styled.h1`
-  margin-bottom: 1rem;
+  margin: 5rem 0 1rem 0;
   color: brown;
   font-family: "Do Hyeon", sans-serif;
   font-size: 1.6rem;
