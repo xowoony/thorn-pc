@@ -194,7 +194,6 @@ const Context = styled.div`
 const IntroSection = styled.div`
   padding: 2rem 0;
   background-color: #fafafa;
-  margin-bottom: 5rem;
   width: 100%;
   align-items: center;
   display: flex;
