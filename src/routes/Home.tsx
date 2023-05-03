@@ -365,15 +365,15 @@ function Home() {
                     {/* 깃허브 바로가기 */}
                     <a
                       style={{
-                        width: "3rem",
-                        height: "3rem",
+                        width: "4.2rem",
+                        height: "4rem",
                         marginRight: "2rem",
                       }}
                       href="https://github.com/xowoony/etb-public"
                       target="_blank"
                     >
                       <img
-                        style={{ width: "3rem", height: "3rem" }}
+                        style={{ width: "4.2rem", height: "4rem" }}
                         src="github.jpg"
                         alt=""
                       />
