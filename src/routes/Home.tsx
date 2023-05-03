@@ -134,7 +134,7 @@ const PjTitle = styled.h3`
   font-size: 2rem;
   font-family: "Noto Serif KR", serif;
   box-shadow: rgb(220 100 100 / 25%) 0px -15px 0px inset;
-  margin-top: 3rem;
+  margin-top: 1.2rem;
 `;
 
 // 프로젝트명, 개발인원, 프로젝트 설명..
@@ -167,7 +167,6 @@ const PjItrTitle = styled.h1`
 const EtbImage = styled.img`
   width: 36rem;
   height: 16rem;
-  margin-bottom: 3rem;
   margin-top: 1rem;
 `;
 
@@ -312,10 +311,168 @@ function Home() {
             <Popup>
               <TextContainer>
                 <TextBox>
-                  <PjTitle>Thorn Coin</PjTitle>
-                  <PjItrTitle>프로젝트 소개</PjItrTitle>
+                  <PjTitle
+                    style={{
+                      boxShadow: "rgb(194 189 61 / 25%) 0px -15px 0px inset",
+                    }}
+                  >
+                    Thorn Coin
+                  </PjTitle>
+                  <div
+                    style={{
+                      height: "3rem",
+                      width: "10rem",
+                      marginTop: "1rem",
+                      alignItems: " center",
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "center",
+                    }}
+                  >
+                    {/* 깃허브 바로가기 */}
+                    <a
+                      style={{
+                        width: "3.2rem",
+                        height: "3rem",
+                        marginRight: "2rem",
+                      }}
+                      href="https://github.com/xowoony/thorn-coin"
+                      target="_blank"
+                    >
+                      <img
+                        style={{ width: "3.2rem", height: "3rem" }}
+                        src="github.jpg"
+                        alt=""
+                      />
+                    </a>
+                    {/* Thorn Coin 홈페이지 바로가기 */}
+                    <a
+                      style={{ width: "2.5rem", height: "2.5rem" }}
+                      href="https://xowoony.github.io/thorn-coin/"
+                      target="_blank"
+                    >
+                      <img
+                        style={{ width: "2.5rem", height: "2.5rem" }}
+                        src="thc.jpg"
+                        alt=""
+                      />
+                    </a>
+                  </div>
                   <EtbImage src="thc-home.jpg" alt="" />
-                  <Video controls src="etb-home.mp4"></Video>
+                  <PjItrTitle style={{ color: "#8d823c" }}>
+                    프로젝트 소개
+                  </PjItrTitle>
+                  <IntroSection>
+                    <SubTitleContainer>
+                      <SubTitle
+                        style={{ borderLeft: "6px solid rgb(179 159 103)" }}
+                      >
+                        프로젝트명
+                      </SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>Thorn Coin</div>
+                    </Context>
+                    <SubTitleContainer>
+                      <SubTitle
+                        style={{ borderLeft: "6px solid rgb(179 159 103)" }}
+                      >
+                        개발 인원
+                      </SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>1인 개발</div>
+                    </Context>
+                    <SubTitleContainer>
+                      <SubTitle
+                        style={{ borderLeft: "6px solid rgb(179 159 103)" }}
+                      >
+                        프로젝트 설명
+                      </SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>
+                        어쩌구 저쩌구
+                        <br />
+                        어쩌구 저쩌구
+                        <br />
+                      </div>
+                    </Context>
+                  </IntroSection>
+                  <PjItrTitle style={{ color: "#8d823c" }}>
+                    구현영상 & 상세기능 설명
+                  </PjItrTitle>
+                  <IntroSection>
+                    {/* 1 */}
+                    <SubTitleContainer>
+                      <SubTitle>HOME</SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>
+                        [상세기능 설명]
+                        <li>index.html 페이지 프론트엔드 전반 사항</li>
+                      </div>
+                    </Context>
+                    <Video controls src="etb-home.mp4"></Video>
+                    {/* 2 */}
+                    <SubTitleContainer>
+                      <SubTitle>시작하기 ▶ 회원가입</SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>
+                        [상세기능 설명]
+                        <li>회원가입 부분 백엔드, 프론트엔드 전반 사항</li>
+                        <p>
+                          사용자로부터 회원가입에 필요한 항목들을 입력받은 후,
+                        </p>
+                        <p>
+                          이미 가입한 사용자의 정보와 일치 하는 정보가 없을 경우
+                        </p>
+                        <p>정상적으로 회원가입이 될 수 있게 구현하였습니다.</p>
+                        <p>
+                          회원가입시 이메일 인증을 통해 코드를 받고 입력하여
+                          가입할 수 있게 구현하였습니다.
+                        </p>
+                        <p>
+                          비밀번호는 해싱되어 DB에 저장될 수 있도록 하였습니다.
+                        </p>
+                      </div>
+                    </Context>
+                    <Context>
+                      <div>
+                        <li
+                          style={{
+                            listStyleType: "number",
+                            textIndent: "1.2rem",
+                            marginTop: "2rem",
+                          }}
+                        >
+                          회원가입의 시작
+                        </li>
+                        <Video controls src="register1.mp4"></Video>
+                        <li
+                          style={{
+                            listStyleType: "number",
+                            textIndent: "1.2rem",
+                            marginTop: "2rem",
+                          }}
+                        >
+                          회원가입 요청 후 메일로 인증번호 전송
+                        </li>
+                        <RegisterImg src="register2.jpg"></RegisterImg>
+                        <li
+                          style={{
+                            listStyleType: "number",
+                            textIndent: "1.2rem",
+                            marginTop: "2rem",
+                          }}
+                        >
+                          회원가입 완료
+                        </li>
+                        <Video controls src="register3.mp4"></Video>
+                      </div>
+                    </Context>
+                  </IntroSection>
                 </TextBox>
               </TextContainer>
             </Popup>
@@ -324,15 +481,221 @@ function Home() {
         {/* THORN TO DO */}
         {showTtdPopup ? (
           <PopupContainer>
+            <ThcHeader>
+              <ThcTitle>
+                <Title>THORN TO DO</Title>
+                <CloseButton onClick={onTtdClosePopup}>X</CloseButton>
+              </ThcTitle>
+            </ThcHeader>
             <Popup>
-              <ThcHeader>
-                <ThcTitle>
-                  <Title>THORN TO DO</Title>
-                  <CloseButton onClick={onTtdClosePopup}>X</CloseButton>
-                </ThcTitle>
-              </ThcHeader>
               <TextContainer>
-                <h1>THORN TO DO</h1>
+                <TextBox>
+                  <PjTitle style={{ boxShadow: "rgb(1 242 17 / 25%) 0px -15px 0px inset" }}>THORN TO DO</PjTitle>
+                  <div
+                    style={{
+                      height: "3rem",
+                      width: "10rem",
+                      marginTop: "1rem",
+                      alignItems: " center",
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "center",
+                    }}
+                  >
+                    {/* 깃허브 바로가기 */}
+                    <a
+                      style={{
+                        width: "3.2rem",
+                        height: "3rem",
+                        marginRight: "2rem",
+                      }}
+                      href="https://github.com/xowoony/thorn-to-do/"
+                      target="_blank"
+                    >
+                      <img
+                        style={{ width: "3.2rem", height: "3rem" }}
+                        src="ttd.jpg"
+                        alt=""
+                      />
+                    </a>
+                    {/* THORN TO DO 홈페이지 바로가기 */}
+                    <a
+                      style={{ width: "2.5rem", height: "2.5rem" }}
+                      href="https://xowoony.github.io/thorn-to-do/"
+                      target="_blank"
+                    >
+                      <img
+                        style={{ width: "2.5rem", height: "2.5rem" }}
+                        src="etb.jpg"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+
+                  <EtbImage src="etb-home.jpg" alt="" />
+                  <PjItrTitle style={{color: "#3d9134"}}>프로젝트 소개</PjItrTitle>
+                  <IntroSection>
+                    <SubTitleContainer>
+                      <SubTitle style={{ borderLeft: "6px solid rgb(124 208 131)" }}>프로젝트명</SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>THORN TO DO</div>
+                    </Context>
+                    <SubTitleContainer>
+                      <SubTitle style={{ borderLeft: "6px solid rgb(124 208 131)" }}>개발 인원</SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>1인</div>
+                    </Context>
+                    <SubTitleContainer>
+                      <SubTitle style={{ borderLeft: "6px solid rgb(124 208 131)" }}>프로젝트 설명</SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>
+                        ㅇㅇㅇ
+                        <br />
+                        ㅇㅇㅇ
+                        <br />
+                        어쩌구
+                        <br />
+                      </div>
+                    </Context>
+                    <SubTitleContainer>
+                      <SubTitle style={{ borderLeft: "6px solid rgb(124 208 131)" }}>기여한 부분</SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>
+                        <span style={{ boxShadow: "rgb(161 237 154 / 44%) 0px -8px 0px inset" }}>프로젝트 팀장</span>
+                        <br />
+                        <span style={{ boxShadow: "rgb(161 237 154 / 44%) 0px -8px 0px inset" }}>프로젝트 아이디어 최초 제안</span>
+                        <br />
+                        <br />
+                        <span style={{ boxShadow: "rgb(161 237 154 / 44%) 0px -8px 0px inset" }}>프론트엔드</span>
+                        <li>화면설계 전반</li>
+                        <li>전체 사이트 프론트 통일</li>
+                        <br />
+                        <br />
+                        <span style={{ boxShadow: "rgb(161 237 154 / 44%) 0px -8px 0px inset" }}>백엔드</span>
+                        <li>카카오 주소찾기 API를 활용한 회원가입 폼 구현</li>
+                        <li>
+                          로그인, 로그아웃, 이메일 찾기, 비밀번호 재설정 구현
+                        </li>
+                        <li>
+                          마이페이지(닉네임변경, 연락처변경, 주소변경,
+                          회원탈퇴)구현
+                        </li>
+                        <li>맥주 소개 페이지 구현</li>
+                      </div>
+                    </Context>
+                  </IntroSection>
+                  <PjItrTitle  style={{color: "#3d9134"}}>구현영상 & 상세기능 설명</PjItrTitle>
+                  <IntroSection>
+                    {/* 1 */}
+                    <SubTitleContainer>
+                      <SubTitle>HOME</SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>
+                        [기여한 부분]
+                        <li>index.html 페이지 프론트엔드 전반 사항</li>
+                      </div>
+                    </Context>
+                    <Video controls src="etb-home.mp4"></Video>
+                    {/* 2 */}
+                    <SubTitleContainer>
+                      <SubTitle>시작하기 ▶ 회원가입</SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>
+                        [기여한 부분]
+                        <li>회원가입 부분 백엔드, 프론트엔드 전반 사항</li>
+                        <p>
+                          사용자로부터 회원가입에 필요한 항목들을 입력받은 후,
+                        </p>
+                        <p>
+                          이미 가입한 사용자의 정보와 일치 하는 정보가 없을 경우
+                        </p>
+                        <p>정상적으로 회원가입이 될 수 있게 구현하였습니다.</p>
+                        <p>
+                          회원가입시 이메일 인증을 통해 코드를 받고 입력하여
+                          가입할 수 있게 구현하였습니다.
+                        </p>
+                        <p>
+                          비밀번호는 해싱되어 DB에 저장될 수 있도록 하였습니다.
+                        </p>
+                      </div>
+                    </Context>
+                    <Context>
+                      <div>
+                        <li
+                          style={{
+                            listStyleType: "number",
+                            textIndent: "1.2rem",
+                            marginTop: "2rem",
+                          }}
+                        >
+                          회원가입의 시작
+                        </li>
+                        <Video controls src="register1.mp4"></Video>
+                        <li
+                          style={{
+                            listStyleType: "number",
+                            textIndent: "1.2rem",
+                            marginTop: "2rem",
+                          }}
+                        >
+                          회원가입 요청 후 메일로 인증번호 전송
+                        </li>
+                        <RegisterImg src="register2.jpg"></RegisterImg>
+                        <li
+                          style={{
+                            listStyleType: "number",
+                            textIndent: "1.2rem",
+                            marginTop: "2rem",
+                          }}
+                        >
+                          회원가입 완료
+                        </li>
+                        <Video controls src="register3.mp4"></Video>
+                      </div>
+                    </Context>
+                    {/* 3 */}
+                    <SubTitleContainer>
+                      <SubTitle>시작하기 ▶ 로그인</SubTitle>
+                      <a href="https://xowoony.tistory.com/424" target="_blank">
+                        <span
+                          style={{
+                            marginLeft: "2rem",
+                            fontSize: "0.7rem",
+                            boxShadow:
+                              "rgb(220 100 137 / 25%) 0px -10px 0px inset",
+                          }}
+                        >
+                          개발 블로그 기록
+                        </span>
+                      </a>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>
+                        [기여한 부분]
+                        <li>로그인 부분 백엔드, 프론트엔드 전반 사항</li>
+                        <p>
+                          사용자가 입력한 이메일과 비밀번호가 회원가입한 유저의
+                          이메일과 비밀번호와
+                        </p>
+                        <p>일치할 경우 로그인이 되도록 구현하였습니다.</p>
+                        <p>
+                          그 외의 이메일을 입력했거나 비밀번호가 틀렸을 경우
+                          로그인이 되지 않으며,
+                        </p>
+                        <p>
+                          로그인에 실패하였으니 다시 시도하라는 경고 메시지를
+                          띄우도록 조치하였습니다.
+                        </p>
+                      </div>
+                    </Context>
+                  </IntroSection>
+                </TextBox>
               </TextContainer>
             </Popup>
           </PopupContainer>
