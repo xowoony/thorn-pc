@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/thorn-pc/static/css/main.31d6cfe0.css",
-    "main.js": "/thorn-pc/static/js/main.a67fafdd.js",
+    "main.js": "/thorn-pc/static/js/main.457b5f9c.js",
     "index.html": "/thorn-pc/index.html",
-    "main.a67fafdd.js.map": "/thorn-pc/static/js/main.a67fafdd.js.map"
+    "main.457b5f9c.js.map": "/thorn-pc/static/js/main.457b5f9c.js.map"
   },
   "entrypoints": [
     "static/css/main.31d6cfe0.css",
-    "static/js/main.a67fafdd.js"
+    "static/js/main.457b5f9c.js"
   ]
 }
