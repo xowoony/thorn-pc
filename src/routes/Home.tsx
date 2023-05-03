@@ -168,6 +168,7 @@ const EtbImage = styled.img`
   width: 36rem;
   height: 16rem;
   margin-top: 1rem;
+  box-shadow: 2px 3px 9px gray;
 `;
 
 const Context = styled.div`
@@ -313,7 +314,7 @@ function Home() {
                 <TextBox>
                   <PjTitle
                     style={{
-                      boxShadow: "rgb(194 189 61 / 25%) 0px -15px 0px inset",
+                      boxShadow: "rgb(194 194 61 / 25%) 0px -15px 0px inset",
                     }}
                   >
                     Thorn Coin
@@ -381,7 +382,7 @@ function Home() {
                       </SubTitle>
                     </SubTitleContainer>
                     <Context>
-                      <div>1인 개발</div>
+                      <div>1인 (개인 프로젝트)</div>
                     </Context>
                     <SubTitleContainer>
                       <SubTitle
@@ -405,37 +406,32 @@ function Home() {
                   <IntroSection>
                     {/* 1 */}
                     <SubTitleContainer>
-                      <SubTitle>HOME</SubTitle>
+                      <SubTitle
+                        style={{ borderLeft: "6px solid rgb(179 159 103)" }}
+                      >
+                        HOME
+                      </SubTitle>
                     </SubTitleContainer>
                     <Context>
                       <div>
                         [상세기능 설명]
-                        <li>index.html 페이지 프론트엔드 전반 사항</li>
+                        <li>실시간 인기 코인을 한눈에 볼 수 있습니다.</li>
                       </div>
                     </Context>
-                    <Video controls src="etb-home.mp4"></Video>
+                    <Video controls src="thorn-coin-home.mp4"></Video>
                     {/* 2 */}
                     <SubTitleContainer>
-                      <SubTitle>시작하기 ▶ 회원가입</SubTitle>
+                      <SubTitle
+                        style={{ borderLeft: "6px solid rgb(179 159 103)" }}
+                      >
+                        Coin 상세 페이지
+                      </SubTitle>
                     </SubTitleContainer>
                     <Context>
                       <div>
                         [상세기능 설명]
-                        <li>회원가입 부분 백엔드, 프론트엔드 전반 사항</li>
-                        <p>
-                          사용자로부터 회원가입에 필요한 항목들을 입력받은 후,
-                        </p>
-                        <p>
-                          이미 가입한 사용자의 정보와 일치 하는 정보가 없을 경우
-                        </p>
-                        <p>정상적으로 회원가입이 될 수 있게 구현하였습니다.</p>
-                        <p>
-                          회원가입시 이메일 인증을 통해 코드를 받고 입력하여
-                          가입할 수 있게 구현하였습니다.
-                        </p>
-                        <p>
-                          비밀번호는 해싱되어 DB에 저장될 수 있도록 하였습니다.
-                        </p>
+                        <li>각각의 코인에 대한 상세 정보를 보여주는 페이지 입니다.</li>
+                        <li>실시간 코인 시세변화, 차트정보를 제공하고 있습니다.</li>
                       </div>
                     </Context>
                     <Context>
@@ -447,9 +443,9 @@ function Home() {
                             marginTop: "2rem",
                           }}
                         >
-                          회원가입의 시작
+                          가격 정보
                         </li>
-                        <Video controls src="register1.mp4"></Video>
+                        <Video controls src="thorn-coin-price.mp4"></Video>
                         <li
                           style={{
                             listStyleType: "number",
@@ -457,19 +453,26 @@ function Home() {
                             marginTop: "2rem",
                           }}
                         >
-                          회원가입 요청 후 메일로 인증번호 전송
+                          차트 정보
                         </li>
-                        <RegisterImg src="register2.jpg"></RegisterImg>
-                        <li
-                          style={{
-                            listStyleType: "number",
-                            textIndent: "1.2rem",
-                            marginTop: "2rem",
-                          }}
-                        >
-                          회원가입 완료
-                        </li>
-                        <Video controls src="register3.mp4"></Video>
+                        <Video controls src="thorn-coin-chart.mp4"></Video>
+                      </div>
+                    </Context>
+                    {/* 다크모드 */}
+                    <SubTitleContainer>
+                      <SubTitle
+                        style={{ borderLeft: "6px solid rgb(179 159 103)" }}
+                      >
+                        DARK & LIGHT MODE
+                      </SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>
+                        [상세기능 설명]
+                        <li>사용자의 편의성을 높이기 위해 DARK, LIGHT 모드를 구현하였습니다.</li>
+                        <p>홈페이지 상단 헤더에서 테마변경 버튼을 클릭하여</p>
+                        <p>쉽게 테마를 변경할 수 있도록 하였습니다.</p>
+                        <Video controls src="thorn-coin-theme.mp4"></Video>
                       </div>
                     </Context>
                   </IntroSection>
@@ -490,7 +493,13 @@ function Home() {
             <Popup>
               <TextContainer>
                 <TextBox>
-                  <PjTitle style={{ boxShadow: "rgb(1 242 17 / 25%) 0px -15px 0px inset" }}>THORN TO DO</PjTitle>
+                  <PjTitle
+                    style={{
+                      boxShadow: "rgb(1 242 17 / 25%) 0px -15px 0px inset",
+                    }}
+                  >
+                    THORN TO DO
+                  </PjTitle>
                   <div
                     style={{
                       height: "3rem",
@@ -532,50 +541,101 @@ function Home() {
                     </a>
                   </div>
 
-                  <EtbImage src="etb-home.jpg" alt="" />
-                  <PjItrTitle style={{color: "#3d9134"}}>프로젝트 소개</PjItrTitle>
+                  <EtbImage src="ttd-home.jpg" alt="" />
+                  <PjItrTitle style={{ color: "rgb(68 155 59)" }}>
+                    프로젝트 소개
+                  </PjItrTitle>
                   <IntroSection>
                     <SubTitleContainer>
-                      <SubTitle style={{ borderLeft: "6px solid rgb(124 208 131)" }}>프로젝트명</SubTitle>
+                      <SubTitle
+                        style={{ borderLeft: "6px solid rgb(68 155 59)" }}
+                      >
+                        프로젝트명
+                      </SubTitle>
                     </SubTitleContainer>
                     <Context>
                       <div>THORN TO DO</div>
                     </Context>
                     <SubTitleContainer>
-                      <SubTitle style={{ borderLeft: "6px solid rgb(124 208 131)" }}>개발 인원</SubTitle>
+                      <SubTitle
+                        style={{ borderLeft: "6px solid rgb(68 155 59)" }}
+                      >
+                        개발 인원
+                      </SubTitle>
                     </SubTitleContainer>
                     <Context>
-                      <div>1인</div>
+                      <div>1인 (개인 프로젝트)</div>
                     </Context>
                     <SubTitleContainer>
-                      <SubTitle style={{ borderLeft: "6px solid rgb(124 208 131)" }}>프로젝트 설명</SubTitle>
+                      <SubTitle
+                        style={{ borderLeft: "6px solid rgb(68 155 59)" }}
+                      >
+                        프로젝트 설명
+                      </SubTitle>
                     </SubTitleContainer>
                     <Context>
                       <div>
-                        ㅇㅇㅇ
+                        간단하게 TO DO LIST를 작성할 수 있는 사이트입니다.
                         <br />
-                        ㅇㅇㅇ
+                        TODO, DOING, DONE 총 세 카테고리가 있으며
                         <br />
-                        어쩌구
+                        각각의 카테고리에서 메모를 추가할 수 있습니다.
                         <br />
+                        생성된 메모는 버튼을 클릭하여 상태를 변경하여
+                        <br />
+                        카테고리를 옮길 수도, 삭제할 수도 있습니다.
+                        <br />
+                        THORN TO DO는 모바일 반응형으로 제작하였습니다.
                       </div>
                     </Context>
                     <SubTitleContainer>
-                      <SubTitle style={{ borderLeft: "6px solid rgb(124 208 131)" }}>기여한 부분</SubTitle>
+                      <SubTitle
+                        style={{ borderLeft: "6px solid rgb(68 155 59)" }}
+                      >
+                        기여한 부분
+                      </SubTitle>
                     </SubTitleContainer>
                     <Context>
                       <div>
-                        <span style={{ boxShadow: "rgb(161 237 154 / 44%) 0px -8px 0px inset" }}>프로젝트 팀장</span>
+                        <span
+                          style={{
+                            boxShadow:
+                              "rgb(161 237 154 / 44%) 0px -8px 0px inset",
+                          }}
+                        >
+                          프로젝트 팀장
+                        </span>
                         <br />
-                        <span style={{ boxShadow: "rgb(161 237 154 / 44%) 0px -8px 0px inset" }}>프로젝트 아이디어 최초 제안</span>
+                        <span
+                          style={{
+                            boxShadow:
+                              "rgb(161 237 154 / 44%) 0px -8px 0px inset",
+                          }}
+                        >
+                          프로젝트 아이디어 최초 제안
+                        </span>
                         <br />
                         <br />
-                        <span style={{ boxShadow: "rgb(161 237 154 / 44%) 0px -8px 0px inset" }}>프론트엔드</span>
+                        <span
+                          style={{
+                            boxShadow:
+                              "rgb(161 237 154 / 44%) 0px -8px 0px inset",
+                          }}
+                        >
+                          프론트엔드
+                        </span>
                         <li>화면설계 전반</li>
                         <li>전체 사이트 프론트 통일</li>
                         <br />
                         <br />
-                        <span style={{ boxShadow: "rgb(161 237 154 / 44%) 0px -8px 0px inset" }}>백엔드</span>
+                        <span
+                          style={{
+                            boxShadow:
+                              "rgb(161 237 154 / 44%) 0px -8px 0px inset",
+                          }}
+                        >
+                          백엔드
+                        </span>
                         <li>카카오 주소찾기 API를 활용한 회원가입 폼 구현</li>
                         <li>
                           로그인, 로그아웃, 이메일 찾기, 비밀번호 재설정 구현
@@ -588,11 +648,17 @@ function Home() {
                       </div>
                     </Context>
                   </IntroSection>
-                  <PjItrTitle  style={{color: "#3d9134"}}>구현영상 & 상세기능 설명</PjItrTitle>
+                  <PjItrTitle style={{ color: "rgb(68 155 59)" }}>
+                    구현영상 & 상세기능 설명
+                  </PjItrTitle>
                   <IntroSection>
                     {/* 1 */}
                     <SubTitleContainer>
-                      <SubTitle>HOME</SubTitle>
+                      <SubTitle
+                        style={{ borderLeft: "6px solid rgb(68 155 59)" }}
+                      >
+                        HOME
+                      </SubTitle>
                     </SubTitleContainer>
                     <Context>
                       <div>
@@ -603,7 +669,11 @@ function Home() {
                     <Video controls src="etb-home.mp4"></Video>
                     {/* 2 */}
                     <SubTitleContainer>
-                      <SubTitle>시작하기 ▶ 회원가입</SubTitle>
+                      <SubTitle
+                        style={{ borderLeft: "6px solid rgb(68 155 59)" }}
+                      >
+                        시작하기 ▶ 회원가입
+                      </SubTitle>
                     </SubTitleContainer>
                     <Context>
                       <div>
@@ -661,14 +731,18 @@ function Home() {
                     </Context>
                     {/* 3 */}
                     <SubTitleContainer>
-                      <SubTitle>시작하기 ▶ 로그인</SubTitle>
+                      <SubTitle
+                        style={{ borderLeft: "6px solid rgb(68 155 59)" }}
+                      >
+                        시작하기 ▶ 로그인
+                      </SubTitle>
                       <a href="https://xowoony.tistory.com/424" target="_blank">
                         <span
                           style={{
                             marginLeft: "2rem",
                             fontSize: "0.7rem",
                             boxShadow:
-                              "rgb(220 100 137 / 25%) 0px -10px 0px inset",
+                              "rgb(161 237 154 / 44%) 0px -8px 0px inset",
                           }}
                         >
                           개발 블로그 기록
@@ -767,7 +841,7 @@ function Home() {
                       <SubTitle>개발 인원</SubTitle>
                     </SubTitleContainer>
                     <Context>
-                      <div>3인</div>
+                      <div>3인 (팀프로젝트)</div>
                     </Context>
                     <SubTitleContainer>
                       <SubTitle>프로젝트 설명</SubTitle>
