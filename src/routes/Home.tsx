@@ -303,13 +303,12 @@ function Home() {
         {showThcPopup ? (
           <PopupContainer>
             <ThcHeader>
-                <ThcTitle>
-                  <Title>Thorn Coin</Title>
-                  <CloseButton onClick={onThcClosePopup}>X</CloseButton>
-                </ThcTitle>
-              </ThcHeader>
+              <ThcTitle>
+                <Title>Thorn Coin</Title>
+                <CloseButton onClick={onThcClosePopup}>X</CloseButton>
+              </ThcTitle>
+            </ThcHeader>
             <Popup>
-              
               <TextContainer>
                 <TextBox>
                   <PjTitle>Thorn Coin</PjTitle>
@@ -583,6 +582,78 @@ function Home() {
                         [기여한 부분]
                         <li>연락처 변경 부분 백엔드, 프론트엔드 전반 사항</li>
                         <Video controls src="contact-change.mp4"></Video>
+                      </div>
+                    </Context>
+                    {/* 7 주소 변경 */}
+                    <SubTitleContainer>
+                      <SubTitle>시작하기 ▶ 마이페이지 ▶ 주소 변경</SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>
+                        [기여한 부분]
+                        <li>주소 변경 부분 백엔드, 프론트엔드 전반 사항</li>
+                        <Video controls src="address-change.mp4"></Video>
+                      </div>
+                    </Context>
+                    {/* 8 닉네임 변경 */}
+                    <SubTitleContainer>
+                      <SubTitle>시작하기 ▶ 마이페이지 ▶ 회원 탈퇴</SubTitle>
+                      <a href="https://xowoony.tistory.com/419" target="_blank">
+                        <span
+                          style={{
+                            marginLeft: "2rem",
+                            fontSize: "0.7rem",
+                            boxShadow:
+                              "rgb(220 100 137 / 25%) 0px -10px 0px inset",
+                          }}
+                        >
+                          개발 블로그 기록
+                        </span>
+                      </a>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>
+                        [기여한 부분]
+                        <li>회원탈퇴 부분 백엔드, 프론트엔드 전반 사항</li>
+                        <p>유저로부터 이메일과 패스워드를 입력하게 한 뒤</p>
+                        <p>
+                          그것이 실제로 DB에 있는 유저의 이메일, 패스워드와
+                          일치하는지를 체크한 후
+                        </p>
+                        <p>일치했을 경우 탈퇴가 진행되도록 구현하였습니다.</p>
+                        <Video controls src="delete-user.mp4"></Video>
+                      </div>
+                    </Context>
+                    {/* 9 BEER*/}
+                    <SubTitleContainer>
+                      <SubTitle>PRODUCT ▶ BEER</SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>
+                        [기여한 부분]
+                        <li>백엔드</li>
+                        <p>
+                          국내맥주, 해외맥주를 카테고리별로 정렬하여 볼 수 있게
+                          구현 하였으며,
+                        </p>
+                        <p style={{ marginBottom: "1rem" }}>
+                          페이징을 구현하였습니다
+                        </p>
+                        <li>프론트엔드</li>
+                        <p>BEER 페이지 전반 사항</p>
+                        <p>(맥주 클릭시 상세정보를 볼 수 있는 부분 제외)</p>
+                        <Video controls src="contact-change.mp4"></Video>
+                      </div>
+                    </Context>
+                    {/* 10 REVIEW*/}
+                    <SubTitleContainer>
+                      <SubTitle>PRODUCT ▶ REVIEW</SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>
+                        [기여한 부분]
+                        <li>없음</li>
+                        <Video controls src="review.mp4"></Video>
                       </div>
                     </Context>
                   </IntroSection>
