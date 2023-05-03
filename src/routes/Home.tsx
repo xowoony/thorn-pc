@@ -365,27 +365,27 @@ function Home() {
                     {/* 깃허브 바로가기 */}
                     <a
                       style={{
-                        width: "4.2rem",
-                        height: "4rem",
+                        width: "3.2rem",
+                        height: "3rem",
                         marginRight: "2rem",
                       }}
                       href="https://github.com/xowoony/etb-public"
                       target="_blank"
                     >
                       <img
-                        style={{ width: "4.2rem", height: "4rem" }}
+                        style={{ width: "3.2rem", height: "3rem" }}
                         src="github.jpg"
                         alt=""
                       />
                     </a>
                     {/* 잔이비어 홈페이지 바로가기 */}
                     <a
-                      style={{ width: "3rem", height: "3rem" }}
+                      style={{ width: "2.5rem", height: "2.5rem" }}
                       href="https://etb.xowoony.dev/"
                       target="_blank"
                     >
                       <img
-                        style={{ width: "3rem", height: "3rem" }}
+                        style={{ width: "2.5rem", height: "2.5rem" }}
                         src="etb.jpg"
                         alt=""
                       />
