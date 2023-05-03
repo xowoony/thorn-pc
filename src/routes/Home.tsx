@@ -241,6 +241,9 @@ const Footer = styled.footer`
     display: flex;
     flex-direction: row;
     justify-content: center;
+    &:active {
+      background-color: #0000002e;
+    }
     img {
       width: 1.3rem;
       height: 1.2rem;
@@ -552,7 +555,6 @@ function Home() {
                       />
                     </a>
                   </div>
-
                   <EtbImage src="ttd-home.jpg" alt="" />
                   <PjItrTitle style={{ color: "rgb(68 155 59)" }}>
                     프로젝트 소개
@@ -641,7 +643,7 @@ function Home() {
                         style={{ borderLeft: "6px solid rgb(68 155 59)" }}
                       >
                         DONE
-                      </SubTitle> 
+                      </SubTitle>
                     </SubTitleContainer>
                     <Context>
                       <div>
@@ -1048,6 +1050,33 @@ function Home() {
             <img src="windows-logo.jpg" alt="" />
             <span>시작</span>
           </button>
+        </div>
+        <div
+          style={{
+            width: "5.5rem",
+            height: "1.89rem",
+            marginLeft: "auto",
+            marginRight: "0.5rem",
+            color: "black",
+            fontSize: "0.78rem",
+            alignItems: "center",
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            // borderRight: "0.05rem solid white",
+            // borderBottom: "0.05rem solid white",
+            // borderTop: "0.05rem solid gray",
+            // borderLeft: "0.05rem solid gray",
+            borderWidth: "0.05rem",
+            borderStyle: "solid",
+            borderColor: "gray white white gray",
+          }}
+        >
+          <div>
+            <div style={{ fontFamily: "monospace", fontWeight: "100" }}>
+              오후 2:22
+            </div>
+          </div>
         </div>
       </Footer>
     </Container>
