@@ -514,7 +514,7 @@ function Home() {
                     >
                       <img
                         style={{ width: "3.2rem", height: "3rem" }}
-                        src="ttd.jpg"
+                        src="github.jpg"
                         alt=""
                       />
                     </a>
@@ -526,7 +526,7 @@ function Home() {
                     >
                       <img
                         style={{ width: "2.5rem", height: "2.5rem" }}
-                        src="etb.jpg"
+                        src="ttd.jpg"
                         alt=""
                       />
                     </a>
