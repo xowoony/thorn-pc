@@ -794,6 +794,12 @@ function Home() {
                           React Hook Form을 이용하여 입력폼 빌드와 검증
                         </p>
                         <li style={{ marginBottom: "-0.3rem" }}>
+                          Recoil-persist
+                        </li>
+                        <p style={{ marginBottom: "1rem" }}>
+                          Recoil Persist를 이용하여 localStorage에 데이터 저장
+                        </p>
+                        <li style={{ marginBottom: "-0.3rem" }}>
                           State Management
                         </li>
                         <p style={{ marginBottom: "1rem" }}>
@@ -817,6 +823,9 @@ function Home() {
                         </li>
                         <li style={{ marginBottom: "-0.3rem" }}>Recoil</li>
                         <li style={{ marginBottom: "-0.3rem" }}>
+                          Recoil Persist
+                        </li>
+                        <li style={{ marginBottom: "-0.3rem" }}>
                           React Hook Form
                         </li>
                       </div>
@@ -837,7 +846,7 @@ function Home() {
                     <Context>
                       <div>
                         [상세기능 설명]
-                        <li style={{marginBottom:"-0.2rem"}}>
+                        <li style={{ marginBottom: "-0.2rem" }}>
                           TODO 카테고리에서는 DOING, DONE, DELETE 버튼이
                           활성화되며
                         </li>
@@ -856,7 +865,7 @@ function Home() {
                     <Context>
                       <div>
                         [상세기능 설명]
-                        <li style={{marginBottom:"-0.2rem"}}>
+                        <li style={{ marginBottom: "-0.2rem" }}>
                           DOING 카테고리에서는 TODO, DONE, DELETE 버튼이
                           활성화되며
                         </li>
@@ -875,7 +884,7 @@ function Home() {
                     <Context>
                       <div>
                         [상세기능 설명]
-                        <li style={{marginBottom:"-0.2rem"}}>
+                        <li style={{ marginBottom: "-0.2rem" }}>
                           DONE 카테고리에서는 TODO, DOING, DELETE 버튼이
                           활성화되며
                         </li>
