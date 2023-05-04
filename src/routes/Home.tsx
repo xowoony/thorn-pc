@@ -1431,6 +1431,8 @@ function Home() {
                       fontWeight: "500",
                       lineHeight: "25px",
                       marginBottom: "6rem",
+                      marginLeft: "2rem",
+                      marginTop: "1.5rem",
                     }}
                   >
                     안녕하세요? 새로운 것에 대해 호기심이 많고 탐험하는 것을
@@ -1454,6 +1456,7 @@ function Home() {
                     backgroundColor: "black",
                     color: "white",
                     paddingTop: "4rem",
+                    paddingBottom: "4rem",
                   }}
                 >
                   <div
@@ -1467,6 +1470,131 @@ function Home() {
                     }}
                   >
                     SKILLS
+                  </div>
+                  <div
+                    style={{
+                      alignItems: "center",
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "center",
+                      marginTop: "3rem",
+                    }}
+                  >
+                    <span
+                      style={{
+                        marginRight: "1.2rem",
+                        boxShadow: "none",
+                        padding: "0.4rem",
+                        borderRadius: "0.2rem",
+                        backgroundColor: "white",
+                        color: "red",
+                        border: "0.0625rem solid",
+                        marginLeft: "1.5rem",
+                      }}
+                    >
+                      HTML
+                    </span>
+                    <span
+                      style={{
+                        marginRight: "1.2rem",
+                        boxShadow: "none",
+                        padding: "0.4rem",
+                        borderRadius: "0.2rem",
+                        backgroundColor: "white",
+                        color: "#3876e3",
+                        border: "0.0625rem solid",
+                      }}
+                    >
+                      CSS
+                    </span>
+                    <span
+                      style={{
+                        marginRight: "1.2rem",
+                        boxShadow: "none",
+                        padding: "0.4rem",
+                        borderRadius: "0.2rem",
+                        backgroundColor: "white",
+                        color: "#e3b800",
+                        border: "0.0625rem solid",
+                      }}
+                    >
+                      Javascript
+                    </span>
+                    <span
+                      style={{
+                        marginRight: "1.2rem",
+                        boxShadow: "none",
+                        padding: "0.4rem",
+                        borderRadius: "0.2rem",
+                        backgroundColor: "white",
+                        color: "#034cab",
+                        border: "0.0625rem solid",
+                      }}
+                    >
+                      Typescript
+                    </span>
+                    <span
+                      style={{
+                        marginRight: "1.2rem",
+                        boxShadow: "none",
+                        padding: "0.4rem",
+                        borderRadius: "0.2rem",
+                        backgroundColor: "white",
+                        color: "#01b2da",
+                        border: "0.0625rem solid",
+                      }}
+                    >
+                      React
+                    </span>
+                  </div>
+                  <div
+                    style={{
+                      alignItems: "center",
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "center",
+                      marginTop: "3rem",
+                    }}
+                  >
+                    <span
+                      style={{
+                        marginRight: "1.2rem",
+                        boxShadow: "none",
+                        padding: "0.4rem",
+                        borderRadius: "0.2rem",
+                        backgroundColor: "white",
+                        color: "#2f5d7f",
+                        border: "0.0625rem solid",
+                      }}
+                    >
+                      java
+                    </span>
+                    <span
+                      style={{
+                        marginRight: "1.2rem",
+                        boxShadow: "none",
+                        padding: "0.4rem",
+                        borderRadius: "0.2rem",
+                        backgroundColor: "white",
+                        color: "#032742",
+                        border: "0.0625rem solid",
+                      }}
+                    >
+                      MariaDB
+                    </span>
+                    <span
+                      style={{
+                        marginRight: "1.2rem",
+                        boxShadow: "none",
+                        padding: "0.4rem",
+                        borderRadius: "0.2rem",
+                        backgroundColor: "white",
+                        color: "#1cb611",
+                        border: "0.0625rem solid",
+                      }}
+                    >
+                      Spring Boot
+                    </span>
                   </div>
                 </div>
                 <div
@@ -1490,6 +1618,37 @@ function Home() {
                   >
                     EDUCATION
                   </div>
+                  <p
+                    style={{
+                      fontSize: "0.9rem",
+                      padding: "0 3rem",
+                      fontWeight: "500",
+                      lineHeight: "25px",
+                      marginBottom: "1rem",
+                      marginTop: "4rem",
+                    }}
+                  >
+                    <span style={{ marginRight: "5rem" }}>계명대학교</span>
+                    <span style={{ marginRight: "17rem" }}>체육학 전공</span>
+                    <span>2013. 03 ~ 2016. 08</span>
+                  </p>
+                  <p
+                    style={{
+                      fontSize: "0.9rem",
+                      padding: "0 3rem",
+                      fontWeight: "500",
+                      lineHeight: "25px",
+                      marginBottom: "8rem",
+                    }}
+                  >
+                    <span style={{ marginRight: "1.2rem" }}>
+                      KOREA IT ACADEMY
+                    </span>
+                    <span style={{ marginRight: "1.2rem" }}>
+                      임베디드 소프트웨어 융합 풀스택 개발자 양성과정
+                    </span>
+                    <span>2022. 08 ~ 2023. 02</span>
+                  </p>
                   <div
                     style={{
                       width: "100%",
@@ -1497,6 +1656,7 @@ function Home() {
                       backgroundColor: "black",
                       color: "white",
                       paddingTop: "4rem",
+                      paddingBottom: "4rem",
                     }}
                   >
                     <div
@@ -1511,7 +1671,6 @@ function Home() {
                     >
                       CONTACT
                     </div>
-                    {/* 테이블 */}
                     <div
                       style={{
                         width: "100%",
@@ -1528,7 +1687,7 @@ function Home() {
                           height: "100%",
                         }}
                       >
-                        <div>
+                        <div style={{ marginLeft: "5rem" }}>
                           <div
                             style={{
                               height: "6rem",
@@ -1571,7 +1730,14 @@ function Home() {
                                 href="https://xowoony.tistory.com/"
                                 target="_blank"
                               >
-                                <img style={{filter: "brightness(100)"}} src="tistory.jpg" alt="" />
+                                <img
+                                  style={{
+                                    filter: "brightness(100)",
+                                    width: "3.5rem",
+                                  }}
+                                  src="tistory.jpg"
+                                  alt=""
+                                />
                               </a>
                             </span>
                           </div>
@@ -1583,6 +1749,8 @@ function Home() {
                               display: "flex",
                               flexDirection: "column",
                               justifyContent: "center",
+                              fontFamily: "monospace",
+                              fontSize: "16px",
                             }}
                           >
                             <div>
@@ -1605,13 +1773,15 @@ function Home() {
                           display: "flex",
                           justifyContent: " center",
                           flexDirection: "column",
+                          marginBottom: "2rem",
                         }}
                       >
                         <img
                           style={{
-                            width: "10rem",
-                            height: "10rem",
+                            width: "8.5rem",
+                            height: "8.5rem",
                             filter: "brightness(100)",
+                            marginRight: "10rem",
                           }}
                           src="qr.jpg"
                           alt=""
