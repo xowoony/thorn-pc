@@ -295,7 +295,7 @@ function Home() {
         </Item>
         <Item onDoubleClick={onTtdDblClick}>
           <Thc src="ttd.jpg" alt="" />
-          <Text>THORN TO DO</Text>
+          <Text style={{ fontSize: "0.7rem" }}>THORN TO DO</Text>
         </Item>
         <Item onDoubleClick={onEtbDblClick}>
           <Thc src="etb.jpg" alt="" />
@@ -794,7 +794,7 @@ function Home() {
                           React Hook Form을 이용하여 입력폼 빌드와 검증
                         </p>
                         <li style={{ marginBottom: "-0.3rem" }}>
-                          Recoil-persist
+                          Recoil Persist
                         </li>
                         <p style={{ marginBottom: "1rem" }}>
                           Recoil Persist를 이용하여 localStorage에 데이터 저장
