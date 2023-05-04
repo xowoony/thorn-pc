@@ -554,6 +554,10 @@ function Home() {
                         <li>
                           실시간 코인 시세변화, 차트정보를 제공하고 있습니다.
                         </li>
+                        <li>
+                          중첩 라우팅을 통해 가격정보와 차트정보 탭을
+                          구현하였습니다.
+                        </li>
                       </div>
                     </Context>
                     <Context>
@@ -567,6 +571,10 @@ function Home() {
                         >
                           가격 정보
                         </li>
+                        <p>
+                          달러 가격과 24시간 거래량, 시가총액, 변동사항 등
+                          다양한 정보가 표시됩니다.
+                        </p>
                         <Video controls src="thorn-coin-price.mp4"></Video>
                         <li
                           style={{
@@ -577,6 +585,7 @@ function Home() {
                         >
                           차트 정보
                         </li>
+                        <p>3주간의 가격변화를 나타내는 차트가 표시됩니다.</p>
                         <Video controls src="thorn-coin-chart.mp4"></Video>
                       </div>
                     </Context>
@@ -828,10 +837,14 @@ function Home() {
                     <Context>
                       <div>
                         [상세기능 설명]
-                        <li>ㅇㅇㅇ</li>
+                        <li style={{marginBottom:"-0.2rem"}}>
+                          TODO 카테고리에서는 DOING, DONE, DELETE 버튼이
+                          활성화되며
+                        </li>
+                        <p>버튼을 클릭하여 상태를 변경할 수 있습니다.</p>
                       </div>
                     </Context>
-                    <Video controls src="etb-home.mp4"></Video>
+                    <Video controls src="todo.mp4"></Video>
                     {/* 2 */}
                     <SubTitleContainer>
                       <SubTitle
@@ -843,10 +856,14 @@ function Home() {
                     <Context>
                       <div>
                         [상세기능 설명]
-                        <li>ㅇㅇㅇㅇㅇ</li>
+                        <li style={{marginBottom:"-0.2rem"}}>
+                          DOING 카테고리에서는 TODO, DONE, DELETE 버튼이
+                          활성화되며
+                        </li>
+                        <p>버튼을 클릭하여 상태를 변경할 수 있습니다.</p>
                       </div>
                     </Context>
-                    <Video controls src="etb-home.mp4"></Video>
+                    <Video controls src="doing.mp4"></Video>
                     {/* 3 */}
                     <SubTitleContainer>
                       <SubTitle
@@ -858,8 +875,12 @@ function Home() {
                     <Context>
                       <div>
                         [상세기능 설명]
-                        <li>ㅇㅇㅇ</li>
-                        <Video controls src="etb-home.mp4"></Video>
+                        <li style={{marginBottom:"-0.2rem"}}>
+                          DONE 카테고리에서는 TODO, DOING, DELETE 버튼이
+                          활성화되며
+                        </li>
+                        <p>버튼을 클릭하여 상태를 변경할 수 있습니다.</p>
+                        <Video controls src="done.mp4"></Video>
                       </div>
                     </Context>
                   </IntroSection>
