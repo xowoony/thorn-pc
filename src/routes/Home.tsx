@@ -407,6 +407,109 @@ function Home() {
                         <br />
                       </div>
                     </Context>
+                    <SubTitleContainer>
+                      <SubTitle
+                        style={{ borderLeft: "6px solid rgb(179 159 103)" }}
+                      >
+                        사용 기술 스택
+                      </SubTitle>
+                    </SubTitleContainer>
+                    <Context >
+                      <div
+                        style={{
+                          fontFamily: "'Do Hyeon'",
+                          fontSize: "0.9rem",
+                          color: "black",
+                          marginTop:"1rem"
+                        }}
+                      >
+                        <span
+                          style={{
+                            marginRight: "1.2rem",
+                            boxShadow: "none",
+                            padding: "0.4rem",
+                            borderRadius: "0.2rem",
+                            backgroundColor: "white",
+                            color: "#e3b800",
+                            border: "0.0625rem solid",
+                          }}
+                        >
+                          Javascript
+                        </span>
+                        <span
+                          style={{
+                            marginRight: "1.2rem",
+                            boxShadow: "none",
+                            padding: "0.4rem",
+                            borderRadius: "0.2rem",
+                            backgroundColor: "white",
+                            color: "#034cab",
+                            border: "0.0625rem solid",
+                          }}
+                        >
+                          Typescript
+                        </span>
+                        <span
+                          style={{
+                            marginRight: "1.2rem",
+                            boxShadow: "none",
+                            padding: "0.4rem",
+                            borderRadius: "0.2rem",
+                            backgroundColor: "white",
+                            color: "#01b2da",
+                            border: "0.0625rem solid",
+                          }}
+                        >
+                          React
+                        </span>
+                        <span
+                          style={{
+                            marginRight: "1.2rem",
+                            boxShadow: "none",
+                            padding: "0.4rem",
+                            borderRadius: "0.2rem",
+                            backgroundColor: "white",
+                            color: "black",
+                            border: "0.0625rem solid",
+                          }}
+                        >
+                          Recoil
+                        </span>
+                      </div>
+                    </Context>
+                    <SubTitleContainer>
+                      <SubTitle
+                        style={{ borderLeft: "6px solid rgb(179 159 103)" }}
+                      >
+                        구현 기능
+                      </SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>
+                        <li style={{ marginBottom: "-0.3rem" }}>
+                          Data Fetching
+                        </li>
+                        <p style={{ marginBottom: "1rem" }}>
+                          React Query를 이용하여 Crypto Price API 데이터
+                          fetching
+                        </p>
+                        <li style={{ marginBottom: "-0.3rem" }}>
+                          Styled Components
+                        </li>
+                        <p style={{ marginBottom: "1rem" }}>
+                          Styled Components를 이용한 디자인 시스템 확장
+                        </p>
+                        <li style={{ marginBottom: "-0.3rem" }}>Dark Mode</li>
+                        <p style={{ marginBottom: "1rem" }}>다크모드 구현</p>
+                        <li style={{ marginBottom: "-0.3rem" }}>
+                          Data Visualization
+                        </li>
+                        <p style={{ marginBottom: "1rem" }}>
+                          Apex Charts를 활용하여 암호화폐 시세 변화 데이터
+                          시각화 구현
+                        </p>
+                      </div>
+                    </Context>
                   </IntroSection>
                   <PjItrTitle style={{ color: "#8d823c" }}>
                     구현영상 & 상세기능 설명
@@ -1073,7 +1176,13 @@ function Home() {
           }}
         >
           <div>
-            <div style={{ fontFamily: "monospace", fontWeight: "100" }}>
+            <div
+              style={{
+                fontFamily: "monospace",
+                fontWeight: "100",
+                fontSize: "14px",
+              }}
+            >
               오후 2:22
             </div>
           </div>
