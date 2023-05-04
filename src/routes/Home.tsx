@@ -414,28 +414,15 @@ function Home() {
                         사용 기술 스택
                       </SubTitle>
                     </SubTitleContainer>
-                    <Context >
+                    <Context>
                       <div
                         style={{
                           fontFamily: "'Do Hyeon'",
                           fontSize: "0.9rem",
                           color: "black",
-                          marginTop:"1rem"
+                          marginTop: "1rem",
                         }}
                       >
-                        <span
-                          style={{
-                            marginRight: "1.2rem",
-                            boxShadow: "none",
-                            padding: "0.4rem",
-                            borderRadius: "0.2rem",
-                            backgroundColor: "white",
-                            color: "#e3b800",
-                            border: "0.0625rem solid",
-                          }}
-                        >
-                          Javascript
-                        </span>
                         <span
                           style={{
                             marginRight: "1.2rem",
@@ -508,6 +495,26 @@ function Home() {
                           Apex Charts를 활용하여 암호화폐 시세 변화 데이터
                           시각화 구현
                         </p>
+                      </div>
+                    </Context>
+                    <SubTitleContainer>
+                      <SubTitle
+                        style={{ borderLeft: "6px solid rgb(179 159 103)" }}
+                      >
+                        사용한 패키지
+                      </SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>
+                        <li style={{ marginBottom: "-0.3rem" }}>
+                          React Router
+                        </li>
+                        <li style={{ marginBottom: "-0.3rem" }}>React Query</li>
+                        <li style={{ marginBottom: "-0.3rem" }}>
+                          Styled Components
+                        </li>
+                        <li style={{ marginBottom: "-0.3rem" }}>Typescript</li>
+                        <li style={{ marginBottom: "-0.3rem" }}>Apex Charts</li>
                       </div>
                     </Context>
                   </IntroSection>
@@ -705,6 +712,106 @@ function Home() {
                         THORN TO DO는 모바일 반응형으로 제작되었습니다.
                       </div>
                     </Context>
+                    <SubTitleContainer>
+                      <SubTitle
+                        style={{ borderLeft: "6px solid rgb(68 155 59)" }}
+                      >
+                        사용 기술 스택
+                      </SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div
+                        style={{
+                          fontFamily: "'Do Hyeon'",
+                          fontSize: "0.9rem",
+                          color: "black",
+                          marginTop: "1rem",
+                        }}
+                      >
+                        <span
+                          style={{
+                            marginRight: "1.2rem",
+                            boxShadow: "none",
+                            padding: "0.4rem",
+                            borderRadius: "0.2rem",
+                            backgroundColor: "white",
+                            color: "#034cab",
+                            border: "0.0625rem solid",
+                          }}
+                        >
+                          Typescript
+                        </span>
+                        <span
+                          style={{
+                            marginRight: "1.2rem",
+                            boxShadow: "none",
+                            padding: "0.4rem",
+                            borderRadius: "0.2rem",
+                            backgroundColor: "white",
+                            color: "#01b2da",
+                            border: "0.0625rem solid",
+                          }}
+                        >
+                          React
+                        </span>
+                        <span
+                          style={{
+                            marginRight: "1.2rem",
+                            boxShadow: "none",
+                            padding: "0.4rem",
+                            borderRadius: "0.2rem",
+                            backgroundColor: "white",
+                            color: "black",
+                            border: "0.0625rem solid",
+                          }}
+                        >
+                          Recoil
+                        </span>
+                      </div>
+                    </Context>
+                    <SubTitleContainer>
+                      <SubTitle
+                        style={{ borderLeft: "6px solid rgb(68 155 59)" }}
+                      >
+                        구현 기능
+                      </SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>
+                        <li style={{ marginBottom: "-0.3rem" }}>
+                          Form Validation
+                        </li>
+                        <p style={{ marginBottom: "1rem" }}>
+                          React Hook Form을 이용하여 입력폼 빌드와 검증
+                        </p>
+                        <li style={{ marginBottom: "-0.3rem" }}>
+                          State Management
+                        </li>
+                        <p style={{ marginBottom: "1rem" }}>
+                          Recoil atoms와 selectors를 이용하여 어플리케이션
+                          상태관리
+                        </p>
+                      </div>
+                    </Context>
+                    <SubTitleContainer>
+                      <SubTitle
+                        style={{ borderLeft: "6px solid rgb(68 155 59)" }}
+                      >
+                        사용한 패키지
+                      </SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>
+                        <li style={{ marginBottom: "-0.3rem" }}>Typescript</li>
+                        <li style={{ marginBottom: "-0.3rem" }}>
+                          Styled Components
+                        </li>
+                        <li style={{ marginBottom: "-0.3rem" }}>Recoil</li>
+                        <li style={{ marginBottom: "-0.3rem" }}>
+                          React Hook Form
+                        </li>
+                      </div>
+                    </Context>
                   </IntroSection>
                   <PjItrTitle style={{ color: "rgb(68 155 59)" }}>
                     구현영상 & 상세기능 설명
@@ -876,6 +983,102 @@ function Home() {
                           회원탈퇴)구현
                         </li>
                         <li>맥주 소개 페이지 구현</li>
+                      </div>
+                    </Context>
+                    <SubTitleContainer>
+                      <SubTitle
+                        style={{ borderLeft: "6px solid  rgb(165 50 50)" }}
+                      >
+                        사용 기술 스택
+                      </SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div
+                        style={{
+                          fontFamily: "'Do Hyeon'",
+                          fontSize: "0.9rem",
+                          color: "black",
+                          marginTop: "1rem",
+                        }}
+                      >
+                        <span
+                          style={{
+                            marginRight: "1.2rem",
+                            boxShadow: "none",
+                            padding: "0.4rem",
+                            borderRadius: "0.2rem",
+                            backgroundColor: "white",
+                            color: "red",
+                            border: "0.0625rem solid",
+                          }}
+                        >
+                          HTML
+                        </span>
+                        <span
+                          style={{
+                            marginRight: "1.2rem",
+                            boxShadow: "none",
+                            padding: "0.4rem",
+                            borderRadius: "0.2rem",
+                            backgroundColor: "white",
+                            color: "#3876e3",
+                            border: "0.0625rem solid",
+                          }}
+                        >
+                          CSS
+                        </span>
+                        <span
+                          style={{
+                            marginRight: "1.2rem",
+                            boxShadow: "none",
+                            padding: "0.4rem",
+                            borderRadius: "0.2rem",
+                            backgroundColor: "white",
+                            color: "#e3b800",
+                            border: "0.0625rem solid",
+                          }}
+                        >
+                          Javascript
+                        </span>
+                        <span
+                          style={{
+                            marginRight: "1.2rem",
+                            boxShadow: "none",
+                            padding: "0.4rem",
+                            borderRadius: "0.2rem",
+                            backgroundColor: "white",
+                            color: "#2f5d7f",
+                            border: "0.0625rem solid",
+                          }}
+                        >
+                          java
+                        </span>
+                        <span
+                          style={{
+                            marginRight: "1.2rem",
+                            boxShadow: "none",
+                            padding: "0.4rem",
+                            borderRadius: "0.2rem",
+                            backgroundColor: "white",
+                            color: "#032742",
+                            border: "0.0625rem solid",
+                          }}
+                        >
+                          MariaDB
+                        </span>
+                        <span
+                          style={{
+                            marginRight: "1.2rem",
+                            boxShadow: "none",
+                            padding: "0.4rem",
+                            borderRadius: "0.2rem",
+                            backgroundColor: "white",
+                            color: "#1cb611",
+                            border: "0.0625rem solid",
+                          }}
+                        >
+                          Spring Boot
+                        </span>
                       </div>
                     </Context>
                   </IntroSection>
