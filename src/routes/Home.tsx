@@ -1520,35 +1520,65 @@ function Home() {
                         display: "flex",
                         flexDirection: "row",
                         justifyContent: "center",
-                        border: "0.0625rem solid",
                       }}
                     >
                       <div
                         style={{
                           width: "100%",
                           height: "100%",
-                          backgroundColor: " #F44336",
                         }}
                       >
                         <div>
                           <div
                             style={{
-                              backgroundColor: "yellow",
                               height: "6rem",
-                              width: "20rem",
                               alignItems: "center",
                               display: "flex",
                               flexDirection: "row",
                               justifyContent: "center",
                             }}
                           >
-                            깃허브, 링크드인, 티스토리
+                            <span style={{ marginRight: "2rem" }}>
+                              <a
+                                href="https://github.com/xowoony"
+                                target="_blank"
+                              >
+                                <i
+                                  style={{
+                                    fontSize: "3rem",
+                                    color: "white",
+                                  }}
+                                  className="fa-brands fa-github skills-logo"
+                                ></i>
+                              </a>
+                            </span>
+                            <span style={{ marginRight: "2rem" }}>
+                              <a
+                                href="https://www.linkedin.com/in/xowoony0222/"
+                                target="_blank"
+                              >
+                                <i
+                                  style={{
+                                    fontSize: "3rem",
+                                    color: "white",
+                                  }}
+                                  className="fa-brands fa-linkedin skills-logo"
+                                ></i>
+                              </a>
+                            </span>
+                            <span>
+                              <a
+                                href="https://xowoony.tistory.com/"
+                                target="_blank"
+                              >
+                                <img style={{filter: "brightness(100)"}} src="tistory.jpg" alt="" />
+                              </a>
+                            </span>
                           </div>
                           <div
                             style={{
                               height: "100%",
                               width: "100%",
-                              backgroundColor: "saddlebrown",
                               alignItems: "center",
                               display: "flex",
                               flexDirection: "column",
@@ -1556,8 +1586,12 @@ function Home() {
                             }}
                           >
                             <div>
-                              <div>email : xowoony@gmail.com</div>
-                              <div>github : xowoony</div>
+                              <div style={{ marginBottom: "0.3rem" }}>
+                                email : xowoony@gmail.com
+                              </div>
+                              <div style={{ marginBottom: "0.3rem" }}>
+                                github : xowoony
+                              </div>
                               <div>blog : xowoony.tistory.com</div>
                             </div>
                           </div>
@@ -1566,7 +1600,6 @@ function Home() {
                       <div
                         style={{
                           width: "20rem",
-                          backgroundColor: "red",
                           height: "100%",
                           alignItems: "center",
                           display: "flex",
