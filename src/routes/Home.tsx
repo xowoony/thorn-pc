@@ -285,6 +285,15 @@ function Home() {
     setshowEtbPopup(false);
   };
 
+  // xowoony
+  const [showXownPopup, setshowXownPopup] = useState(false);
+  const onXownDblClick = (event: React.MouseEvent<HTMLDivElement>) => {
+    setshowXownPopup(true);
+  };
+  const onXownClosePopup = () => {
+    setshowXownPopup(false);
+  };
+
   return (
     <Container>
       <Main>
@@ -300,6 +309,10 @@ function Home() {
         <Item onDoubleClick={onEtbDblClick}>
           <Thc src="etb.jpg" alt="" />
           <Text>잔이비어</Text>
+        </Item>
+        <Item onDoubleClick={onXownDblClick}>
+          <Thc src="xown.jpg" alt="" />
+          <Text>xowoony</Text>
         </Item>
 
         {/* 각각의 아이콘 클릭했을 때 나타날 팝업창들 */}
@@ -1375,6 +1388,205 @@ function Home() {
                     </Context>
                   </IntroSection>
                 </TextBox>
+              </TextContainer>
+            </Popup>
+          </PopupContainer>
+        ) : null}
+        {/* xowoony */}
+        {showXownPopup ? (
+          <PopupContainer>
+            <ThcHeader>
+              <ThcTitle>
+                <Title>xowoony</Title>
+                <CloseButton onClick={onXownClosePopup}>X</CloseButton>
+              </ThcTitle>
+            </ThcHeader>
+            <Popup>
+              <TextContainer style={{ marginTop: "0" }}>
+                <div
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    backgroundColor: "white",
+                    color: "black",
+                    paddingTop: "4rem",
+                  }}
+                >
+                  <div
+                    style={{
+                      fontSize: "2rem",
+                      fontWeight: "500",
+                      padding: "1rem",
+                      fontFamily: "'Anton', sans-serif",
+                      display: "flex",
+                      justifyContent: "center",
+                    }}
+                  >
+                    ABOUT XOWOONY
+                  </div>
+                  <p
+                    style={{
+                      fontSize: "0.9rem",
+                      padding: "0 3rem",
+                      fontWeight: "500",
+                      lineHeight: "25px",
+                      marginBottom: "6rem",
+                    }}
+                  >
+                    안녕하세요? 새로운 것에 대해 호기심이 많고 탐험하는 것을
+                    즐기는 개발자 정소운 입니다. <br />
+                    공부를 처음 시작할 때 특히 개발은 '탐험과 닮아있다' 라는
+                    생각이 문득 들었던 적이 있습니다.
+                    <br />
+                    스스로 목표를 세우고, 시도하는 과정에서 다양한 문제들을
+                    만나고, <br />
+                    문제를 해결해 나가는 과정에서 한 단계 더 성장하는
+                    <br />
+                    탐험과 닮아있는 개발의 모든 과정이 정말 매력적이라
+                    생각하였고,
+                    <br />그 매력으로 지금도 계속 공부해 나가고 있습니다.
+                  </p>
+                </div>
+                <div
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    backgroundColor: "black",
+                    color: "white",
+                    paddingTop: "4rem",
+                  }}
+                >
+                  <div
+                    style={{
+                      fontSize: "2rem",
+                      fontWeight: "500",
+                      padding: "1rem",
+                      fontFamily: "'Anton', sans-serif",
+                      display: "flex",
+                      justifyContent: "center",
+                    }}
+                  >
+                    SKILLS
+                  </div>
+                </div>
+                <div
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    backgroundColor: "white",
+                    color: "black",
+                    paddingTop: "4rem",
+                  }}
+                >
+                  <div
+                    style={{
+                      fontSize: "2rem",
+                      fontWeight: "500",
+                      padding: "1rem",
+                      fontFamily: "'Anton', sans-serif",
+                      display: "flex",
+                      justifyContent: "center",
+                    }}
+                  >
+                    EDUCATION
+                  </div>
+                  <div
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      backgroundColor: "black",
+                      color: "white",
+                      paddingTop: "4rem",
+                    }}
+                  >
+                    <div
+                      style={{
+                        fontSize: "2rem",
+                        fontWeight: "500",
+                        padding: "1rem",
+                        fontFamily: "'Anton', sans-serif",
+                        display: "flex",
+                        justifyContent: "center",
+                      }}
+                    >
+                      CONTACT
+                    </div>
+                    {/* 테이블 */}
+                    <div
+                      style={{
+                        width: "100%",
+                        height: "13rem",
+                        alignItems: "center",
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "center",
+                        border: "0.0625rem solid",
+                      }}
+                    >
+                      <div
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          backgroundColor: " #F44336",
+                        }}
+                      >
+                        <div>
+                          <div
+                            style={{
+                              backgroundColor: "yellow",
+                              height: "6rem",
+                              width: "20rem",
+                              alignItems: "center",
+                              display: "flex",
+                              flexDirection: "row",
+                              justifyContent: "center",
+                            }}
+                          >
+                            깃허브, 링크드인, 티스토리
+                          </div>
+                          <div
+                            style={{
+                              height: "100%",
+                              width: "100%",
+                              backgroundColor: "saddlebrown",
+                              alignItems: "center",
+                              display: "flex",
+                              flexDirection: "column",
+                              justifyContent: "center",
+                            }}
+                          >
+                            <div>
+                              <div>email : xowoony@gmail.com</div>
+                              <div>github : xowoony</div>
+                              <div>blog : xowoony.tistory.com</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        style={{
+                          width: "20rem",
+                          backgroundColor: "red",
+                          height: "100%",
+                          alignItems: "center",
+                          display: "flex",
+                          justifyContent: " center",
+                          flexDirection: "column",
+                        }}
+                      >
+                        <img
+                          style={{
+                            width: "10rem",
+                            height: "10rem",
+                            filter: "brightness(100)",
+                          }}
+                          src="qr.jpg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </TextContainer>
             </Popup>
           </PopupContainer>
