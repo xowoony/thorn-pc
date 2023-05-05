@@ -42,7 +42,7 @@ const Text = styled.div`
 const PopupContainer = styled.div`
   position: fixed;
   top: 0;
-  margin-top: 4.5rem;
+  margin-top: 3.5rem;
   width: 100%;
   align-items: center;
   display: flex;
@@ -58,6 +58,8 @@ const Popup = styled.div`
   width: 50%;
   height: 29rem;
   color: black;
+  max-width: 48rem;
+  min-width: 21rem;
 `;
 
 const ThcHeader = styled.header`
@@ -75,6 +77,8 @@ const ThcHeader = styled.header`
   background-color: #b8b8b8;
   position: fixed;
   padding: 0.2rem;
+  max-width: 48rem;
+  min-width: 21rem;
 `;
 
 const Title = styled.div`
@@ -104,6 +108,8 @@ const TextContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   margin-top: 2rem;
+  @media screen and (max-width: 1090px) {
+  }
 `;
 
 const TextBox = styled.div`
@@ -126,6 +132,9 @@ const CloseButton = styled.button`
   font-size: 0.75rem;
   font-weight: 600;
   background-color: rgb(184, 184, 184);
+  color: black;
+  border-width: 0.12rem;
+  border-color: gray black black gray;
 `;
 
 const PjTitle = styled.h3`
@@ -135,6 +144,9 @@ const PjTitle = styled.h3`
   font-family: "Noto Serif KR", serif;
   box-shadow: rgb(220 100 100 / 25%) 0px -15px 0px inset;
   margin-top: 1.2rem;
+  @media screen and (max-width: 1090px) {
+    font-size: 27px;
+  }
 `;
 
 // 프로젝트명, 개발인원, 프로젝트 설명..
@@ -155,6 +167,15 @@ const SubTitle = styled.div`
   background-color: rgb(233, 230, 227);
   margin-left: 3rem;
   border-left: 6px solid rgb(165 50 50);
+  span {
+    @media screen and (max-width: 1090px) {
+      font-size: 0.2rem;
+    }
+  }
+  @media screen and (max-width: 1090px) {
+    margin-left: 12px;
+    font-size: 0.5rem;
+  }
 `;
 
 const PjItrTitle = styled.h1`
@@ -169,6 +190,10 @@ const EtbImage = styled.img`
   height: 16rem;
   margin-top: 1rem;
   box-shadow: 2px 3px 9px gray;
+  @media screen and (max-width: 1090px) {
+    width: 18rem;
+    height: 11rem;
+  }
 `;
 
 const Context = styled.div`
@@ -179,9 +204,16 @@ const Context = styled.div`
   line-height: 25px;
   p {
     text-indent: 1.2rem;
+    @media screen and (max-width: 1090px) {
+      text-indent: 0;
+    }
   }
   div {
     margin-left: 7rem;
+    @media screen and (max-width: 1090px) {
+      margin-left: 1rem;
+      font-size: 0.7rem;
+    }
   }
   span {
     box-shadow: inset 0 -10px 0 #edcdd770;
@@ -205,11 +237,19 @@ const Video = styled.video`
   width: 35rem;
   height: 20rem;
   margin: 1rem;
+  @media screen and (max-width: 1090px) {
+    width: 16rem;
+    height: 9rem;
+  }
 `;
 
 const RegisterImg = styled.img`
   width: 35.5rem;
   margin-left: 0.6rem;
+  @media screen and (max-width: 1090px) {
+    width: 16rem;
+    height: 9rem;
+  }
 `;
 
 const Footer = styled.footer`
@@ -231,8 +271,10 @@ const Footer = styled.footer`
   z-index: 2;
   height: 2.3rem;
   button {
-    border-left: 0.05rem solid white;
-    border-top: 0.05rem solid white;
+    border-width: 0.05rem 0.1rem 0.1rem 0.05rem;
+    border-style: solid;
+    border-color: white black black white;
+    color: black;
     background-color: transparent;
     margin-left: 0.2rem;
     width: 4.3rem;
@@ -241,6 +283,7 @@ const Footer = styled.footer`
     display: flex;
     flex-direction: row;
     justify-content: center;
+
     &:active {
       background-color: #0000002e;
     }
@@ -254,6 +297,128 @@ const Footer = styled.footer`
       font-weight: 600;
       font-family: "Gothic A1", sans-serif;
     }
+  }
+`;
+
+const XownAbout = styled.p`
+  font-size: 0.9rem;
+  padding: 0px 3rem;
+  font-weight: 500;
+  line-height: 25px;
+  margin-bottom: 6rem;
+  margin-left: 2rem;
+  margin-top: 1.5rem;
+  @media screen and (max-width: 1090px) {
+    font-size: 0.6rem;
+    padding: 15px;
+    margin-left: 0;
+  }
+`;
+
+const SkillsIcon = styled.span`
+  margin-right: 1.2rem;
+  box-shadow: none;
+  padding: 0.4rem;
+  border-radius: 0.2rem;
+  background-color: white;
+  color: red;
+  border: 0.0625rem solid;
+  margin-left: 1.5rem;
+
+  @media screen and (max-width: 1090px) {
+    margin-right: 0.5rem;
+    box-shadow: none;
+    padding: 0.3rem;
+    border-radius: 0.2rem;
+    background-color: white;
+    color: red;
+    border: 0.0625rem solid;
+    margin-left: 0;
+    font-size: 0.7rem;
+  }
+`;
+
+const EduContext = styled.div`
+  font-size: 0.9rem;
+  padding: 0px 3rem;
+  font-weight: 500;
+  line-height: 25px;
+  margin-bottom: 5rem;
+  margin-top: 4rem;
+
+  @media screen and (max-width: 1090px) {
+    font-size: 0.6rem;
+    padding: 0px 2.5rem;
+    margin-top: 2rem;
+  }
+`;
+
+const QrImg = styled.img`
+  width: 8.5rem;
+  height: 8.5rem;
+  filter: brightness(100);
+  margin-right: 10rem;
+  @media screen and (max-width: 1090px) {
+    margin-right: 0;
+    width: 5.5rem;
+    height: 5.5rem;
+    filter: brightness(100);
+  }
+`;
+
+const ContactText = styled.div`
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: monospace;
+  font-size: 16px;
+
+  @media screen and (max-width: 1090px) {
+    font-size: 10px;
+  }
+`;
+
+const ContactLeft = styled.div`
+  /* margin-left: 5rem; */
+  @media screen and (max-width: 1090px) {
+    margin-left: 2rem;
+  }
+`;
+
+const ContactIcon = styled.span`
+  margin-right: 2rem;
+  img {
+    filter: brightness(100);
+    width: 3.5rem;
+    @media screen and (max-width: 1090px) {
+      width: 3rem;
+    }
+  }
+  i {
+    font-size: 3rem;
+    color: white;
+    @media screen and (max-width: 1090px) {
+      font-size: 2.5rem;
+    }
+  }
+
+  @media screen and (max-width: 1090px) {
+    margin-right: 1rem;
+  }
+`;
+
+const EtbStack = styled.div`
+  font-family: "Do Hyeon";
+  font-size: 0.9rem;
+  color: black;
+  margin-top: 1rem;
+  margin-left: 0rem;
+
+  @media screen {
+    margin-left: 2rem;
   }
 `;
 
@@ -1036,93 +1201,93 @@ function Home() {
                       </SubTitle>
                     </SubTitleContainer>
                     <Context>
-                      <div
-                        style={{
-                          fontFamily: "'Do Hyeon'",
-                          fontSize: "0.9rem",
-                          color: "black",
-                          marginTop: "1rem",
-                        }}
-                      >
-                        <span
-                          style={{
-                            marginRight: "1.2rem",
-                            boxShadow: "none",
-                            padding: "0.4rem",
-                            borderRadius: "0.2rem",
-                            backgroundColor: "white",
-                            color: "red",
-                            border: "0.0625rem solid",
-                          }}
+                      <EtbStack>
+                        <div
+                          style={{ marginBottom: "1rem", marginLeft: "3rem" }}
                         >
-                          HTML
-                        </span>
-                        <span
-                          style={{
-                            marginRight: "1.2rem",
-                            boxShadow: "none",
-                            padding: "0.4rem",
-                            borderRadius: "0.2rem",
-                            backgroundColor: "white",
-                            color: "#3876e3",
-                            border: "0.0625rem solid",
-                          }}
-                        >
-                          CSS
-                        </span>
-                        <span
-                          style={{
-                            marginRight: "1.2rem",
-                            boxShadow: "none",
-                            padding: "0.4rem",
-                            borderRadius: "0.2rem",
-                            backgroundColor: "white",
-                            color: "#e3b800",
-                            border: "0.0625rem solid",
-                          }}
-                        >
-                          Javascript
-                        </span>
-                        <span
-                          style={{
-                            marginRight: "1.2rem",
-                            boxShadow: "none",
-                            padding: "0.4rem",
-                            borderRadius: "0.2rem",
-                            backgroundColor: "white",
-                            color: "#2f5d7f",
-                            border: "0.0625rem solid",
-                          }}
-                        >
-                          java
-                        </span>
-                        <span
-                          style={{
-                            marginRight: "1.2rem",
-                            boxShadow: "none",
-                            padding: "0.4rem",
-                            borderRadius: "0.2rem",
-                            backgroundColor: "white",
-                            color: "#032742",
-                            border: "0.0625rem solid",
-                          }}
-                        >
-                          MariaDB
-                        </span>
-                        <span
-                          style={{
-                            marginRight: "1.2rem",
-                            boxShadow: "none",
-                            padding: "0.4rem",
-                            borderRadius: "0.2rem",
-                            backgroundColor: "white",
-                            color: "#1cb611",
-                            border: "0.0625rem solid",
-                          }}
-                        >
-                          Spring Boot
-                        </span>
-                      </div>
+                          <span
+                            style={{
+                              marginRight: "1.2rem",
+                              boxShadow: "none",
+                              padding: "0.4rem",
+                              borderRadius: "0.2rem",
+                              backgroundColor: "white",
+                              color: "red",
+                              border: "0.0625rem solid",
+                            }}
+                          >
+                            HTML
+                          </span>
+                          <span
+                            style={{
+                              marginRight: "1.2rem",
+                              boxShadow: "none",
+                              padding: "0.4rem",
+                              borderRadius: "0.2rem",
+                              backgroundColor: "white",
+                              color: "#3876e3",
+                              border: "0.0625rem solid",
+                            }}
+                          >
+                            CSS
+                          </span>
+                          <span
+                            style={{
+                              marginRight: "1.2rem",
+                              boxShadow: "none",
+                              padding: "0.4rem",
+                              borderRadius: "0.2rem",
+                              backgroundColor: "white",
+                              color: "#e3b800",
+                              border: "0.0625rem solid",
+                            }}
+                          >
+                            Javascript
+                          </span>
+                        </div>
+
+                        <div style={{ marginLeft: "3rem" }}>
+                          <span
+                            style={{
+                              marginRight: "1.2rem",
+                              boxShadow: "none",
+                              padding: "0.4rem",
+                              borderRadius: "0.2rem",
+                              backgroundColor: "white",
+                              color: "#2f5d7f",
+                              border: "0.0625rem solid",
+                            }}
+                          >
+                            java
+                          </span>
+                          <span
+                            style={{
+                              marginRight: "1.2rem",
+                              boxShadow: "none",
+                              padding: "0.4rem",
+                              borderRadius: "0.2rem",
+                              backgroundColor: "white",
+                              color: "#032742",
+                              border: "0.0625rem solid",
+                            }}
+                          >
+                            MariaDB
+                          </span>
+                          <span
+                            style={{
+                              marginRight: "1.2rem",
+                              boxShadow: "none",
+                              padding: "0.4rem",
+                              borderRadius: "0.2rem",
+                              backgroundColor: "white",
+                              color: "#1cb611",
+                              border: "0.0625rem solid",
+                            }}
+                          >
+                            Spring Boot
+                          </span>
+                        </div>
+                      </EtbStack>
                     </Context>
                   </IntroSection>
                   <PjItrTitle>구현영상 & 상세기여 설명</PjItrTitle>
@@ -1208,7 +1373,7 @@ function Home() {
                               "rgb(220 100 137 / 25%) 0px -10px 0px inset",
                           }}
                         >
-                          개발 블로그 기록
+                          블로그 기록
                         </span>
                       </a>
                     </SubTitleContainer>
@@ -1243,7 +1408,7 @@ function Home() {
                               "rgb(220 100 137 / 25%) 0px -10px 0px inset",
                           }}
                         >
-                          개발 블로그 기록
+                          블로그 기록
                         </span>
                       </a>
                     </SubTitleContainer>
@@ -1273,7 +1438,7 @@ function Home() {
                               "rgb(220 100 137 / 25%) 0px -10px 0px inset",
                           }}
                         >
-                          개발 블로그 기록
+                          블로그 기록
                         </span>
                       </a>
                     </SubTitleContainer>
@@ -1318,7 +1483,7 @@ function Home() {
                               "rgb(220 100 137 / 25%) 0px -10px 0px inset",
                           }}
                         >
-                          개발 블로그 기록
+                          블로그 기록
                         </span>
                       </a>
                     </SubTitleContainer>
@@ -1424,30 +1589,22 @@ function Home() {
                   >
                     ABOUT XOWOONY
                   </div>
-                  <p
-                    style={{
-                      fontSize: "0.9rem",
-                      padding: "0 3rem",
-                      fontWeight: "500",
-                      lineHeight: "25px",
-                      marginBottom: "6rem",
-                      marginLeft: "2rem",
-                      marginTop: "1.5rem",
-                    }}
-                  >
-                    안녕하세요? 새로운 것에 대해 호기심이 많고 탐험하는 것을
-                    즐기는 개발자 정소운 입니다. <br />
-                    공부를 처음 시작할 때 특히 개발은 '탐험과 닮아있다' 라는
-                    생각이 문득 들었던 적이 있습니다.
+                  <XownAbout>
+                    안녕하세요?
+                    <br />
+                    새로운 것에 대해 호기심이 많고 탐험하는 것을 즐기는 개발자
+                    정소운 입니다. <br /><br />
+                    공부를 처음 시작할 때 특히 개발은<br/>'탐험과 닮아있다' 라는
+                    생각이 문득 들었던 적이 있습니다.<br />
                     <br />
                     스스로 목표를 세우고, 시도하는 과정에서 다양한 문제들을
                     만나고, <br />
                     문제를 해결해 나가는 과정에서 한 단계 더 성장하는
-                    <br />
+                    <br /><br />
                     탐험과 닮아있는 개발의 모든 과정이 정말 매력적이라
                     생각하였고,
                     <br />그 매력으로 지금도 계속 공부해 나가고 있습니다.
-                  </p>
+                  </XownAbout>
                 </div>
                 <div
                   style={{
@@ -1480,72 +1637,41 @@ function Home() {
                       marginTop: "3rem",
                     }}
                   >
-                    <span
+                    <SkillsIcon
                       style={{
-                        marginRight: "1.2rem",
-                        boxShadow: "none",
-                        padding: "0.4rem",
-                        borderRadius: "0.2rem",
-                        backgroundColor: "white",
                         color: "red",
-                        border: "0.0625rem solid",
-                        marginLeft: "1.5rem",
                       }}
                     >
                       HTML
-                    </span>
-                    <span
+                    </SkillsIcon>
+                    <SkillsIcon
                       style={{
-                        marginRight: "1.2rem",
-                        boxShadow: "none",
-                        padding: "0.4rem",
-                        borderRadius: "0.2rem",
-                        backgroundColor: "white",
-                        color: "#3876e3",
-                        border: "0.0625rem solid",
+                        color: "purple",
                       }}
                     >
                       CSS
-                    </span>
-                    <span
+                    </SkillsIcon>
+                    <SkillsIcon
                       style={{
-                        marginRight: "1.2rem",
-                        boxShadow: "none",
-                        padding: "0.4rem",
-                        borderRadius: "0.2rem",
-                        backgroundColor: "white",
-                        color: "#e3b800",
-                        border: "0.0625rem solid",
+                        color: "rgb(227, 184, 0)",
                       }}
                     >
                       Javascript
-                    </span>
-                    <span
+                    </SkillsIcon>
+                    <SkillsIcon
                       style={{
-                        marginRight: "1.2rem",
-                        boxShadow: "none",
-                        padding: "0.4rem",
-                        borderRadius: "0.2rem",
-                        backgroundColor: "white",
-                        color: "#034cab",
-                        border: "0.0625rem solid",
+                        color: "rgb(3, 76, 171)",
                       }}
                     >
                       Typescript
-                    </span>
-                    <span
+                    </SkillsIcon>
+                    <SkillsIcon
                       style={{
-                        marginRight: "1.2rem",
-                        boxShadow: "none",
-                        padding: "0.4rem",
-                        borderRadius: "0.2rem",
-                        backgroundColor: "white",
-                        color: "#01b2da",
-                        border: "0.0625rem solid",
+                        color: "rgb(1, 178, 218)",
                       }}
                     >
                       React
-                    </span>
+                    </SkillsIcon>
                   </div>
                   <div
                     style={{
@@ -1556,45 +1682,27 @@ function Home() {
                       marginTop: "3rem",
                     }}
                   >
-                    <span
+                    <SkillsIcon
                       style={{
-                        marginRight: "1.2rem",
-                        boxShadow: "none",
-                        padding: "0.4rem",
-                        borderRadius: "0.2rem",
-                        backgroundColor: "white",
-                        color: "#2f5d7f",
-                        border: "0.0625rem solid",
+                        color: "rgb(47, 93, 127)",
                       }}
                     >
                       java
-                    </span>
-                    <span
+                    </SkillsIcon>
+                    <SkillsIcon
                       style={{
-                        marginRight: "1.2rem",
-                        boxShadow: "none",
-                        padding: "0.4rem",
-                        borderRadius: "0.2rem",
-                        backgroundColor: "white",
-                        color: "#032742",
-                        border: "0.0625rem solid",
+                        color: "rgb(3, 39, 66)",
                       }}
                     >
                       MariaDB
-                    </span>
-                    <span
+                    </SkillsIcon>
+                    <SkillsIcon
                       style={{
-                        marginRight: "1.2rem",
-                        boxShadow: "none",
-                        padding: "0.4rem",
-                        borderRadius: "0.2rem",
-                        backgroundColor: "white",
                         color: "#1cb611",
-                        border: "0.0625rem solid",
                       }}
                     >
                       Spring Boot
-                    </span>
+                    </SkillsIcon>
                   </div>
                 </div>
                 <div
@@ -1618,37 +1726,16 @@ function Home() {
                   >
                     EDUCATION
                   </div>
-                  <p
-                    style={{
-                      fontSize: "0.9rem",
-                      padding: "0 3rem",
-                      fontWeight: "500",
-                      lineHeight: "25px",
-                      marginBottom: "1rem",
-                      marginTop: "4rem",
-                    }}
-                  >
-                    <span style={{ marginRight: "5rem" }}>계명대학교</span>
-                    <span style={{ marginRight: "17rem" }}>체육학 전공</span>
-                    <span>2013. 03 ~ 2016. 08</span>
-                  </p>
-                  <p
-                    style={{
-                      fontSize: "0.9rem",
-                      padding: "0 3rem",
-                      fontWeight: "500",
-                      lineHeight: "25px",
-                      marginBottom: "8rem",
-                    }}
-                  >
-                    <span style={{ marginRight: "1.2rem" }}>
-                      KOREA IT ACADEMY
-                    </span>
-                    <span style={{ marginRight: "1.2rem" }}>
-                      임베디드 소프트웨어 융합 풀스택 개발자 양성과정
-                    </span>
-                    <span>2022. 08 ~ 2023. 02</span>
-                  </p>
+                  <EduContext>
+                    <div style={{ fontWeight: "600" }}>계명대학교</div>
+                    <div>체육학 전공</div>
+                    <div>2013. 03 ~ 2016. 08</div>
+                  </EduContext>
+                  <EduContext>
+                    <div style={{ fontWeight: "600" }}>KOREA IT ACADEMY</div>
+                    <div>임베디드 소프트웨어 융합 풀스택 개발자 양성과정</div>
+                    <div>2022. 08 ~ 2023. 02</div>
+                  </EduContext>
                   <div
                     style={{
                       width: "100%",
@@ -1687,7 +1774,7 @@ function Home() {
                           height: "100%",
                         }}
                       >
-                        <div style={{ marginLeft: "5rem" }}>
+                        <ContactLeft>
                           <div
                             style={{
                               height: "6rem",
@@ -1697,75 +1784,45 @@ function Home() {
                               justifyContent: "center",
                             }}
                           >
-                            <span style={{ marginRight: "2rem" }}>
+                            <ContactIcon>
                               <a
                                 href="https://github.com/xowoony"
                                 target="_blank"
                               >
-                                <i
-                                  style={{
-                                    fontSize: "3rem",
-                                    color: "white",
-                                  }}
-                                  className="fa-brands fa-github skills-logo"
-                                ></i>
+                                <i className="fa-brands fa-github skills-logo"></i>
                               </a>
-                            </span>
-                            <span style={{ marginRight: "2rem" }}>
+                            </ContactIcon>
+                            <ContactIcon>
                               <a
                                 href="https://www.linkedin.com/in/xowoony0222/"
                                 target="_blank"
                               >
-                                <i
-                                  style={{
-                                    fontSize: "3rem",
-                                    color: "white",
-                                  }}
-                                  className="fa-brands fa-linkedin skills-logo"
-                                ></i>
+                                <i className="fa-brands fa-linkedin skills-logo"></i>
                               </a>
-                            </span>
-                            <span>
+                            </ContactIcon>
+                            <ContactIcon>
                               <a
                                 href="https://xowoony.tistory.com/"
                                 target="_blank"
                               >
-                                <img
-                                  style={{
-                                    filter: "brightness(100)",
-                                    width: "3.5rem",
-                                  }}
-                                  src="tistory.jpg"
-                                  alt=""
-                                />
+                                <img src="tistory.jpg" alt="" />
                               </a>
-                            </span>
+                            </ContactIcon>
                           </div>
-                          <div
-                            style={{
-                              height: "100%",
-                              width: "100%",
-                              alignItems: "center",
-                              display: "flex",
-                              flexDirection: "column",
-                              justifyContent: "center",
-                              fontFamily: "monospace",
-                              fontSize: "16px",
-                            }}
-                          >
+                          <ContactText>
                             <div>
-                              <div style={{ marginBottom: "0.3rem" }}>
+                              <div style={{ marginBottom: "0.5rem" }}>
                                 email : xowoony@gmail.com
                               </div>
-                              <div style={{ marginBottom: "0.3rem" }}>
+                              <div style={{ marginBottom: "0.5rem" }}>
                                 github : xowoony
                               </div>
                               <div>blog : xowoony.tistory.com</div>
                             </div>
-                          </div>
-                        </div>
+                          </ContactText>
+                        </ContactLeft>
                       </div>
-                      <div
+                      <a href="http://qr.kakao.com/talk/Ub7kyo0rm0.qItr9GzCKcALZz3c-" target="_blank"
                         style={{
                           width: "20rem",
                           height: "100%",
@@ -1776,17 +1833,8 @@ function Home() {
                           marginBottom: "2rem",
                         }}
                       >
-                        <img
-                          style={{
-                            width: "8.5rem",
-                            height: "8.5rem",
-                            filter: "brightness(100)",
-                            marginRight: "10rem",
-                          }}
-                          src="qr.jpg"
-                          alt=""
-                        />
-                      </div>
+                        <QrImg src="qr.jpg" alt="" />
+                      </a>
                     </div>
                   </div>
                 </div>
