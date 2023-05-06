@@ -192,7 +192,7 @@ const EtbImage = styled.img`
   box-shadow: 2px 3px 9px gray;
   @media screen and (max-width: 1090px) {
     width: 18rem;
-    height: 11rem;
+    height: 9.5rem;
   }
 `;
 
@@ -316,7 +316,6 @@ const XownAbout = styled.p`
 `;
 
 const SkillsIcon = styled.span`
-  margin-right: 1.2rem;
   box-shadow: none;
   padding: 0.4rem;
   border-radius: 0.2rem;
@@ -340,7 +339,7 @@ const SkillsIcon = styled.span`
 
 const EduContext = styled.div`
   font-size: 0.9rem;
-  padding: 0px 3rem;
+  padding: 0px 7rem;
   font-weight: 500;
   line-height: 25px;
   margin-bottom: 5rem;
@@ -1587,20 +1586,30 @@ function Home() {
                       justifyContent: "center",
                     }}
                   >
-                    ABOUT XOWOONY
+                    <div
+                      style={{
+                        boxShadow: " rgb(80 234 219 / 25%) 0px -15px 0px inset",
+                      }}
+                    >
+                      ABOUT XOWOONY
+                    </div>
                   </div>
                   <XownAbout>
                     안녕하세요?
                     <br />
-                    새로운 것에 대해 호기심이 많고 탐험하는 것을 즐기는 개발자
-                    정소운 입니다. <br /><br />
-                    공부를 처음 시작할 때 특히 개발은<br/>'탐험과 닮아있다' 라는
-                    생각이 문득 들었던 적이 있습니다.<br />
+                    새로운 것에 대해 호기심이 많고 <br />
+                    탐험하는 것을 즐기는 개발자 정소운 입니다. <br />
+                    <br />
+                    공부를 처음 시작할 때 특히 개발은
+                    <br />
+                    '탐험과 닮아있다' 라는 생각이 문득 들었던 적이 있습니다.
+                    <br />
                     <br />
                     스스로 목표를 세우고, 시도하는 과정에서 다양한 문제들을
                     만나고, <br />
                     문제를 해결해 나가는 과정에서 한 단계 더 성장하는
-                    <br /><br />
+                    <br />
+                    <br />
                     탐험과 닮아있는 개발의 모든 과정이 정말 매력적이라
                     생각하였고,
                     <br />그 매력으로 지금도 계속 공부해 나가고 있습니다.
@@ -1613,7 +1622,7 @@ function Home() {
                     backgroundColor: "black",
                     color: "white",
                     paddingTop: "4rem",
-                    paddingBottom: "4rem",
+                    paddingBottom: "6rem",
                   }}
                 >
                   <div
@@ -1626,7 +1635,10 @@ function Home() {
                       justifyContent: "center",
                     }}
                   >
-                    SKILLS
+                    <div
+                    >
+                      SKILLS
+                    </div>
                   </div>
                   <div
                     style={{
@@ -1724,9 +1736,15 @@ function Home() {
                       justifyContent: "center",
                     }}
                   >
-                    EDUCATION
+                    <div
+                      style={{
+                        boxShadow: " rgb(88 80 234 / 25%) 0px -15px 0px inset",
+                      }}
+                    >
+                      EDUCATION
+                    </div>
                   </div>
-                  <EduContext>
+                  <EduContext style={{ marginBottom: "2rem" }}>
                     <div style={{ fontWeight: "600" }}>계명대학교</div>
                     <div>체육학 전공</div>
                     <div>2013. 03 ~ 2016. 08</div>
@@ -1822,7 +1840,9 @@ function Home() {
                           </ContactText>
                         </ContactLeft>
                       </div>
-                      <a href="http://qr.kakao.com/talk/Ub7kyo0rm0.qItr9GzCKcALZz3c-" target="_blank"
+                      <a
+                        href="http://qr.kakao.com/talk/Ub7kyo0rm0.qItr9GzCKcALZz3c-"
+                        target="_blank"
                         style={{
                           width: "20rem",
                           height: "100%",
