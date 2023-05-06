@@ -387,20 +387,54 @@ const ContactLeft = styled.div`
   }
 `;
 
-const ContactIcon = styled.span`
+const ContactIcon1 = styled.span`
+  margin-right: 2rem;
+
+  i {
+    font-size: 3rem;
+    color: white;
+    &:hover {
+      color: #787878;
+    }
+    @media screen and (max-width: 1090px) {
+      font-size: 2.5rem;
+    }
+  }
+
+  @media screen and (max-width: 1090px) {
+    margin-right: 1rem;
+  }
+`;
+
+const ContactIcon2 = styled.span`
+  margin-right: 1.5rem;
+
+  i {
+    font-size: 3rem;
+    color: white;
+    &:hover {
+      color: #1a73e8;
+    }
+    @media screen and (max-width: 1090px) {
+      font-size: 2.5rem;
+    }
+  }
+
+  @media screen and (max-width: 1090px) {
+    margin-right: 0.5rem;
+  }
+`;
+
+const ContactIcon3 = styled.span`
   margin-right: 2rem;
   img {
     filter: brightness(100);
     width: 3.5rem;
+    &:hover {
+      filter: contrast(0.1);
+    }
     @media screen and (max-width: 1090px) {
       width: 3rem;
-    }
-  }
-  i {
-    font-size: 3rem;
-    color: white;
-    @media screen and (max-width: 1090px) {
-      font-size: 2.5rem;
     }
   }
 
@@ -1635,10 +1669,7 @@ function Home() {
                       justifyContent: "center",
                     }}
                   >
-                    <div
-                    >
-                      SKILLS
-                    </div>
+                    <div>SKILLS</div>
                   </div>
                   <div
                     style={{
@@ -1802,30 +1833,30 @@ function Home() {
                               justifyContent: "center",
                             }}
                           >
-                            <ContactIcon>
+                            <ContactIcon1>
                               <a
                                 href="https://github.com/xowoony"
                                 target="_blank"
                               >
                                 <i className="fa-brands fa-github skills-logo"></i>
                               </a>
-                            </ContactIcon>
-                            <ContactIcon>
+                            </ContactIcon1>
+                            <ContactIcon2>
                               <a
                                 href="https://www.linkedin.com/in/xowoony0222/"
                                 target="_blank"
                               >
                                 <i className="fa-brands fa-linkedin skills-logo"></i>
                               </a>
-                            </ContactIcon>
-                            <ContactIcon>
+                            </ContactIcon2>
+                            <ContactIcon3>
                               <a
                                 href="https://xowoony.tistory.com/"
                                 target="_blank"
                               >
                                 <img src="tistory.jpg" alt="" />
                               </a>
-                            </ContactIcon>
+                            </ContactIcon3>
                           </div>
                           <ContactText>
                             <div>
