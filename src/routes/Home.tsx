@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import "../routes/Home.css";
 import { useState } from "react";
 
 const Container = styled.div`
