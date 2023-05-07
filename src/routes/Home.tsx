@@ -552,6 +552,7 @@ function Home() {
                       }}
                       href="https://github.com/xowoony/thorn-coin"
                       target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <img
                         style={{ width: "3.2rem", height: "3rem" }}
@@ -564,6 +565,7 @@ function Home() {
                       style={{ width: "2.5rem", height: "2.5rem" }}
                       href="https://xowoony.github.io/thorn-coin/"
                       target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <img
                         style={{ width: "2.5rem", height: "2.5rem" }}
@@ -864,6 +866,7 @@ function Home() {
                       }}
                       href="https://github.com/xowoony/thorn-to-do/"
                       target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <img
                         style={{ width: "3.2rem", height: "3rem" }}
@@ -876,6 +879,7 @@ function Home() {
                       style={{ width: "2.5rem", height: "2.5rem" }}
                       href="https://xowoony.github.io/thorn-to-do/"
                       target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <img
                         style={{ width: "2.5rem", height: "2.5rem" }}
@@ -1141,6 +1145,7 @@ function Home() {
                       }}
                       href="https://github.com/xowoony/etb-public"
                       target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <img
                         style={{ width: "3.2rem", height: "3rem" }}
@@ -1153,6 +1158,7 @@ function Home() {
                       style={{ width: "2.5rem", height: "2.5rem" }}
                       href="https://etb.xowoony.dev/"
                       target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <img
                         style={{ width: "2.5rem", height: "2.5rem" }}
@@ -1396,7 +1402,7 @@ function Home() {
                     {/* 3 */}
                     <SubTitleContainer>
                       <SubTitle>시작하기 ▶ 로그인</SubTitle>
-                      <a href="https://xowoony.tistory.com/424" target="_blank">
+                      <a href="https://xowoony.tistory.com/424" target="_blank" rel="noopener noreferrer">
                         <span
                           style={{
                             marginLeft: "2rem",
@@ -1431,7 +1437,7 @@ function Home() {
                     {/* 4 */}
                     <SubTitleContainer>
                       <SubTitle>시작하기 ▶ 로그아웃</SubTitle>
-                      <a href="https://xowoony.tistory.com/425" target="_blank">
+                      <a href="https://xowoony.tistory.com/425" target="_blank" rel="noopener noreferrer">
                         <span
                           style={{
                             marginLeft: "2rem",
@@ -1461,7 +1467,7 @@ function Home() {
                     {/* 5 닉네임 변경 */}
                     <SubTitleContainer>
                       <SubTitle>시작하기 ▶ 마이페이지 ▶ 닉네임 변경</SubTitle>
-                      <a href="https://xowoony.tistory.com/422" target="_blank">
+                      <a href="https://xowoony.tistory.com/422" target="_blank" rel="noopener noreferrer">
                         <span
                           style={{
                             marginLeft: "2rem",
@@ -1506,7 +1512,7 @@ function Home() {
                     {/* 8 닉네임 변경 */}
                     <SubTitleContainer>
                       <SubTitle>시작하기 ▶ 마이페이지 ▶ 회원 탈퇴</SubTitle>
-                      <a href="https://xowoony.tistory.com/419" target="_blank">
+                      <a href="https://xowoony.tistory.com/419" target="_blank" rel="noopener noreferrer">
                         <span
                           style={{
                             marginLeft: "2rem",
@@ -1836,6 +1842,7 @@ function Home() {
                               <a
                                 href="https://github.com/xowoony"
                                 target="_blank"
+                                rel="noopener noreferrer"
                               >
                                 <i className="fa-brands fa-github skills-logo"></i>
                               </a>
@@ -1844,6 +1851,7 @@ function Home() {
                               <a
                                 href="https://www.linkedin.com/in/xowoony0222/"
                                 target="_blank"
+                                rel="noopener noreferrer"
                               >
                                 <i className="fa-brands fa-linkedin skills-logo"></i>
                               </a>
@@ -1852,6 +1860,7 @@ function Home() {
                               <a
                                 href="https://xowoony.tistory.com/"
                                 target="_blank"
+                                rel="noopener noreferrer"
                               >
                                 <img src="tistory.jpg" alt="" />
                               </a>
@@ -1873,6 +1882,7 @@ function Home() {
                       <a
                         href="http://qr.kakao.com/talk/Ub7kyo0rm0.qItr9GzCKcALZz3c-"
                         target="_blank"
+                        rel="noopener noreferrer"
                         style={{
                           width: "20rem",
                           height: "100%",
@@ -1912,10 +1922,6 @@ function Home() {
             display: "flex",
             flexDirection: "row",
             justifyContent: "center",
-            // borderRight: "0.05rem solid white",
-            // borderBottom: "0.05rem solid white",
-            // borderTop: "0.05rem solid gray",
-            // borderLeft: "0.05rem solid gray",
             borderWidth: "0.05rem",
             borderStyle: "solid",
             borderColor: "gray white white gray",
