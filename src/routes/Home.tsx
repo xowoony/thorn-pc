@@ -236,6 +236,10 @@ const Video = styled.video`
   width: 35rem;
   height: 20rem;
   margin: 1rem;
+  video[poster] {
+    height: 100%;
+    width: 100%;
+  }
   @media screen and (max-width: 1090px) {
     width: 16rem;
     height: 9rem;
@@ -612,8 +616,10 @@ function Home() {
                         <br />
                         실시간 인기 코인을 한눈에 볼 수 있으며,
                         <br />
-                        상세 코인 페이지에서 실시간으로 바뀌는 가격정보와
-                        차트정보를 확인할 수 있습니다.
+                        상세 코인 페이지에서
+                        <br />
+                        실시간으로 바뀌는 가격정보와 차트정보를 확인할 수
+                        있습니다.
                         <br />
                         Thorn Coin은 모바일 반응형으로 제작되었습니다.
                         <br />
@@ -748,7 +754,11 @@ function Home() {
                         <li>실시간 인기 코인을 한눈에 볼 수 있습니다.</li>
                       </div>
                     </Context>
-                    <Video controls src="thorn-coin-home.mp4"></Video>
+                    <Video
+                      controls
+                      src="thorn-coin-home.mp4"
+                      poster="thc-home-poster.jpg"
+                    ></Video>
                     {/* 2 */}
                     <SubTitleContainer>
                       <SubTitle
@@ -783,11 +793,13 @@ function Home() {
                         >
                           가격 정보
                         </li>
-                        <p>
-                          달러 가격과 24시간 거래량, 시가총액, 변동사항 등
-                          다양한 정보가 표시됩니다.
-                        </p>
-                        <Video controls src="thorn-coin-price.mp4"></Video>
+                        <p>달러 가격과 24시간 거래량, 시가총액, 변동사항 등</p>
+                        <p>다양한 정보가 표시됩니다.</p>
+                        <Video
+                          controls
+                          src="thorn-coin-price.mp4"
+                          poster="thc-price-poster.jpg"
+                        ></Video>
                         <li
                           style={{
                             listStyleType: "number",
@@ -798,7 +810,11 @@ function Home() {
                           차트 정보
                         </li>
                         <p>3주간의 가격변화를 나타내는 차트가 표시됩니다.</p>
-                        <Video controls src="thorn-coin-chart.mp4"></Video>
+                        <Video
+                          controls
+                          src="thorn-coin-chart.mp4"
+                          poster="thc-chart-poster.jpg"
+                        ></Video>
                       </div>
                     </Context>
                     {/* 다크모드 */}
@@ -818,7 +834,11 @@ function Home() {
                         </li>
                         <p>홈페이지 상단 헤더에서 테마변경 버튼을 클릭하여</p>
                         <p>쉽게 테마를 변경할 수 있도록 하였습니다.</p>
-                        <Video controls src="thorn-coin-theme.mp4"></Video>
+                        <Video
+                          controls
+                          src="thorn-coin-theme.mp4"
+                          poster="thc-theme-poster.jpg"
+                        ></Video>
                       </div>
                     </Context>
                   </IntroSection>
@@ -1067,7 +1087,11 @@ function Home() {
                         <p>버튼을 클릭하여 상태를 변경할 수 있습니다.</p>
                       </div>
                     </Context>
-                    <Video controls src="todo.mp4"></Video>
+                    <Video
+                      controls
+                      src="todo.mp4"
+                      poster="ttd-todo-poster.jpg"
+                    ></Video>
                     {/* 2 */}
                     <SubTitleContainer>
                       <SubTitle
@@ -1086,7 +1110,11 @@ function Home() {
                         <p>버튼을 클릭하여 상태를 변경할 수 있습니다.</p>
                       </div>
                     </Context>
-                    <Video controls src="doing.mp4"></Video>
+                    <Video
+                      controls
+                      src="doing.mp4"
+                      poster="ttd-doing-poster.jpg"
+                    ></Video>
                     {/* 3 */}
                     <SubTitleContainer>
                       <SubTitle
@@ -1103,7 +1131,11 @@ function Home() {
                           활성화되며
                         </li>
                         <p>버튼을 클릭하여 상태를 변경할 수 있습니다.</p>
-                        <Video controls src="done.mp4"></Video>
+                        <Video
+                          controls
+                          src="done.mp4"
+                          poster="ttd-done-poster.jpg"
+                        ></Video>
                       </div>
                     </Context>
                   </IntroSection>
@@ -1340,7 +1372,11 @@ function Home() {
                         <li>index.html 페이지 프론트엔드 전반 사항</li>
                       </div>
                     </Context>
-                    <Video controls src="etb-home.mp4"></Video>
+                    <Video
+                      controls
+                      src="etb-home.mp4"
+                      poster="etb-home-poster.jpg"
+                    ></Video>
                     {/* 2 */}
                     <SubTitleContainer>
                       <SubTitle>시작하기 ▶ 회원가입</SubTitle>
@@ -1356,9 +1392,9 @@ function Home() {
                           이미 가입한 사용자의 정보와 일치 하는 정보가 없을 경우
                         </p>
                         <p>정상적으로 회원가입이 될 수 있게 구현하였습니다.</p>
+                        <p>회원가입시 이메일 인증을 통해</p>
                         <p>
-                          회원가입시 이메일 인증을 통해 코드를 받고 입력하여
-                          가입할 수 있게 구현하였습니다.
+                          코드를 받고 입력하여 가입할 수 있게 구현하였습니다.
                         </p>
                         <p>
                           비밀번호는 해싱되어 DB에 저장될 수 있도록 하였습니다.
@@ -1376,7 +1412,11 @@ function Home() {
                         >
                           회원가입의 시작
                         </li>
-                        <Video controls src="register1.mp4"></Video>
+                        <Video
+                          controls
+                          src="register1.mp4"
+                          poster="etb-register1-poster.jpg"
+                        ></Video>
                         <li
                           style={{
                             listStyleType: "number",
@@ -1396,13 +1436,21 @@ function Home() {
                         >
                           회원가입 완료
                         </li>
-                        <Video controls src="register3.mp4"></Video>
+                        <Video
+                          controls
+                          src="register3.mp4"
+                          poster="etb-register3-poster.jpg"
+                        ></Video>
                       </div>
                     </Context>
                     {/* 3 */}
                     <SubTitleContainer>
                       <SubTitle>시작하기 ▶ 로그인</SubTitle>
-                      <a href="https://xowoony.tistory.com/424" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://xowoony.tistory.com/424"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <span
                           style={{
                             marginLeft: "2rem",
@@ -1419,25 +1467,23 @@ function Home() {
                       <div>
                         [기여한 부분]
                         <li>로그인 부분 백엔드, 프론트엔드 전반 사항</li>
-                        <p>
-                          사용자가 입력한 이메일과 비밀번호가 회원가입한 유저의
-                          이메일과 비밀번호와
-                        </p>
-                        <p>일치할 경우 로그인이 되도록 구현하였습니다.</p>
-                        <p>
-                          그 외의 이메일을 입력했거나 비밀번호가 틀렸을 경우
-                          로그인이 되지 않으며,
-                        </p>
-                        <p>
-                          로그인에 실패하였으니 다시 시도하라는 경고 메시지를
-                          띄우도록 조치하였습니다.
-                        </p>
+                        <p>사용자가 입력한 이메일과 비밀번호가</p>
+                        <p>회원가입한 유저의 이메일과 비밀번호와 일치할 경우</p>
+                        <p>로그인이 되도록 구현하였습니다.</p>
+                        <p>그 외의 이메일을 입력했거나</p>
+                        <p>비밀번호가 틀렸을 경우 로그인이 되지 않으며,</p>
+                        <p>로그인에 실패하였으니 다시 시도하라는</p>
+                        <p>경고 메시지를 띄우도록 조치하였습니다.</p>
                       </div>
                     </Context>
                     {/* 4 */}
                     <SubTitleContainer>
                       <SubTitle>시작하기 ▶ 로그아웃</SubTitle>
-                      <a href="https://xowoony.tistory.com/425" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://xowoony.tistory.com/425"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <span
                           style={{
                             marginLeft: "2rem",
@@ -1461,13 +1507,21 @@ function Home() {
                           로그아웃 후 바로 로그인 페이지로 가도록
                           구현하였습니다.
                         </p>
-                        <Video controls src="logout.mp4"></Video>
+                        <Video
+                          controls
+                          src="logout.mp4"
+                          poster="etb-logout-poster.jpg"
+                        ></Video>
                       </div>
                     </Context>
                     {/* 5 닉네임 변경 */}
                     <SubTitleContainer>
                       <SubTitle>시작하기 ▶ 마이페이지 ▶ 닉네임 변경</SubTitle>
-                      <a href="https://xowoony.tistory.com/422" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://xowoony.tistory.com/422"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <span
                           style={{
                             marginLeft: "2rem",
@@ -1484,7 +1538,11 @@ function Home() {
                       <div>
                         [기여한 부분]
                         <li>닉네임 변경 부분 백엔드, 프론트엔드 전반 사항</li>
-                        <Video controls src="nick-change.mp4"></Video>
+                        <Video
+                          controls
+                          src="nick-change.mp4"
+                          poster="etb-nick-change-poster.jpg"
+                        ></Video>
                       </div>
                     </Context>
                     {/* 6 연락처 변경 */}
@@ -1495,7 +1553,11 @@ function Home() {
                       <div>
                         [기여한 부분]
                         <li>연락처 변경 부분 백엔드, 프론트엔드 전반 사항</li>
-                        <Video controls src="contact-change.mp4"></Video>
+                        <Video
+                          controls
+                          src="contact-change.mp4"
+                          poster="etb-contact-change-poster.jpg"
+                        ></Video>
                       </div>
                     </Context>
                     {/* 7 주소 변경 */}
@@ -1506,13 +1568,21 @@ function Home() {
                       <div>
                         [기여한 부분]
                         <li>주소 변경 부분 백엔드, 프론트엔드 전반 사항</li>
-                        <Video controls src="address-change.mp4"></Video>
+                        <Video
+                          controls
+                          src="address-change.mp4"
+                          poster="etb-address-change-poster.jpg"
+                        ></Video>
                       </div>
                     </Context>
                     {/* 8 닉네임 변경 */}
                     <SubTitleContainer>
                       <SubTitle>시작하기 ▶ 마이페이지 ▶ 회원 탈퇴</SubTitle>
-                      <a href="https://xowoony.tistory.com/419" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://xowoony.tistory.com/419"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <span
                           style={{
                             marginLeft: "2rem",
@@ -1530,12 +1600,14 @@ function Home() {
                         [기여한 부분]
                         <li>회원탈퇴 부분 백엔드, 프론트엔드 전반 사항</li>
                         <p>유저로부터 이메일과 패스워드를 입력하게 한 뒤</p>
-                        <p>
-                          그것이 실제로 DB에 있는 유저의 이메일, 패스워드와
-                          일치하는지를 체크한 후
-                        </p>
+                        <p>그것이 실제로 DB에 있는</p>
+                        <p>유저의 이메일, 패스워드와 일치하는지를 체크한 후</p>
                         <p>일치했을 경우 탈퇴가 진행되도록 구현하였습니다.</p>
-                        <Video controls src="delete-user.mp4"></Video>
+                        <Video
+                          controls
+                          src="delete-user.mp4"
+                          poster="etb-delete-user-poster.jpg"
+                        ></Video>
                       </div>
                     </Context>
                     {/* 9 BEER*/}
@@ -1546,17 +1618,19 @@ function Home() {
                       <div>
                         [기여한 부분]
                         <li>백엔드</li>
-                        <p>
-                          국내맥주, 해외맥주를 카테고리별로 정렬하여 볼 수 있게
-                          구현 하였으며,
-                        </p>
+                        <p>국내맥주, 해외맥주를</p>
+                        <p>카테고리별로 정렬하여 볼 수 있게 구현 하였으며,</p>
                         <p style={{ marginBottom: "1rem" }}>
                           페이징을 구현하였습니다
                         </p>
                         <li>프론트엔드</li>
                         <p>BEER 페이지 전반 사항</p>
                         <p>(맥주 클릭시 상세정보를 볼 수 있는 부분 제외)</p>
-                        <Video controls src="contact-change.mp4"></Video>
+                        <Video
+                          controls
+                          src="beer.mp4"
+                          poster="etb-beer-poster.jpg"
+                        ></Video>
                       </div>
                     </Context>
                     {/* 10 REVIEW*/}
@@ -1567,7 +1641,11 @@ function Home() {
                       <div>
                         [기여한 부분]
                         <li>없음</li>
-                        <Video controls src="review.mp4"></Video>
+                        <Video
+                          controls
+                          src="review.mp4"
+                          poster="etb-review-poster.jpg"
+                        ></Video>
                       </div>
                     </Context>
                     {/* 11 FESTIVAL*/}
@@ -1578,15 +1656,19 @@ function Home() {
                       <div>
                         [기여한 부분]
                         <li>FESTIVAL 페이지 프론트엔드 전반 사항</li>
+                        <p>FESTIVAL 대문 페이지에 들어갔을 때</p>
                         <p>
-                          FESTIVAL 대문 페이지에 들어갔을 때 국내 맥주 페스티벌
-                          정보를 한눈에 볼 수 있게
+                          국내 맥주 페스티벌 정보를 한눈에 볼 수 있게 GRID
+                          형식으로
                         </p>
                         <p>
-                          GRID 형식으로 포스터를 정렬하여 사용자 접근성과
-                          편의성을 높였습니다.
+                          포스터를 정렬하여 사용자 접근성과 편의성을 높였습니다.
                         </p>
-                        <Video controls src="festival.mp4"></Video>
+                        <Video
+                          controls
+                          src="festival.mp4"
+                          poster="etb-festival-poster.jpg"
+                        ></Video>
                       </div>
                     </Context>
                   </IntroSection>
