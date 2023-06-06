@@ -31,6 +31,7 @@ const Thc = styled.img`
   padding: 0.15rem;
 `;
 
+
 const Text = styled.div`
   font-size: 0.8rem;
   font-weight: 100;
@@ -486,6 +487,24 @@ function Home() {
     setshowEtbPopup(false);
   };
 
+  // Trello
+  const [showTrlPopup, setshowTrlPopup] = useState(false);
+  const onTrlDblClick = (event: React.MouseEvent<HTMLDivElement>) => {
+    setshowTrlPopup(true);
+  };
+  const onTrlClosePopup = () => {
+    setshowTrlPopup(false);
+  };
+
+  // Netflix
+  const [showNfxPopup, setshowNfxPopup] = useState(false);
+  const onNfxDblClick = (event: React.MouseEvent<HTMLDivElement>) => {
+    setshowNfxPopup(true);
+  };
+  const onNfxClosePopup = () => {
+    setshowNfxPopup(false);
+  };
+
   // xowoony
   const [showXownPopup, setshowXownPopup] = useState(false);
   const onXownDblClick = (event: React.MouseEvent<HTMLDivElement>) => {
@@ -510,6 +529,14 @@ function Home() {
         <Item onDoubleClick={onEtbDblClick}>
           <Thc src="etb.jpg" alt="" />
           <Text>잔이비어</Text>
+        </Item>
+        <Item onDoubleClick={onTrlDblClick}>
+          <Thc src="Trello.jpg" alt="" />
+          <Text>Trello</Text>
+        </Item>
+        <Item onDoubleClick={onNfxDblClick}>
+          <Thc src="netflix.jpg" alt="" />
+          <Text>Netflix Clone</Text>
         </Item>
         <Item onDoubleClick={onXownDblClick}>
           <Thc src="xown.jpg" alt="" />
@@ -1393,7 +1420,7 @@ function Home() {
                           이미 가입한 사용자의 정보와 일치 하는 정보가 없을 경우
                         </p>
                         <p>정상적으로 회원가입이 될 수 있게 구현하였습니다.</p>
-                        <br/>
+                        <br />
                         <p>회원가입시 이메일 인증을 통해</p>
                         <p>
                           코드를 받고 입력하여 가입할 수 있게 구현하였습니다.
@@ -1472,7 +1499,7 @@ function Home() {
                         <p>사용자가 입력한 이메일과 비밀번호가</p>
                         <p>회원가입한 유저의 이메일과 비밀번호와 일치할 경우</p>
                         <p>로그인이 되도록 구현하였습니다.</p>
-                        <br/>
+                        <br />
                         <p>그 외의 이메일을 입력했거나</p>
                         <p>비밀번호가 틀렸을 경우 로그인이 되지 않으며,</p>
                         <p>로그인에 실패하였으니 다시 시도하라는</p>
@@ -1674,6 +1701,285 @@ function Home() {
                         ></Video>
                       </div>
                     </Context>
+                  </IntroSection>
+                </TextBox>
+              </TextContainer>
+            </Popup>
+          </PopupContainer>
+        ) : null}
+        {/* Trello */}
+        {showTrlPopup ? (
+          <PopupContainer>
+            <ThcHeader>
+              <ThcTitle>
+                <Title>Trello</Title>
+                <CloseButton onClick={onTrlClosePopup}>X</CloseButton>
+              </ThcTitle>
+            </ThcHeader>
+            <Popup>
+              <TextContainer>
+                <TextBox>
+                  <PjTitle
+                    style={{
+                      boxShadow: "rgb(175 156 206 / 56%) 0px -15px 0px inset",
+                    }}
+                  >
+                    Trello
+                  </PjTitle>
+                  <div
+                    style={{
+                      height: "3rem",
+                      width: "10rem",
+                      marginTop: "1rem",
+                      alignItems: " center",
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "center",
+                    }}
+                  >
+                    {/* 깃허브 바로가기 */}
+                    <a
+                      style={{
+                        width: "3.2rem",
+                        height: "3rem",
+                        marginRight: "2rem",
+                      }}
+                      href="https://github.com/xowoony/trello"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        style={{ width: "3.2rem", height: "3rem" }}
+                        src="github.jpg"
+                        alt=""
+                      />
+                    </a>
+                    {/* Trello 홈페이지 바로가기 */}
+                    <a
+                      style={{ width: "2.5rem", height: "2.5rem" }}
+                      href="https://xowoony.github.io/trello/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        style={{ width: "2.5rem", height: "2.5rem" }}
+                        src="Trello.jpg"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                  <EtbImage src="trello-memo-poster.jpg" alt="" />
+                  <PjItrTitle style={{ color: "#5c2aab" }}>
+                    프로젝트 소개
+                  </PjItrTitle>
+                  <IntroSection>
+                    <SubTitleContainer>
+                      <SubTitle style={{ borderLeft: "6px solid #5c2aab" }}>
+                        프로젝트명
+                      </SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>Trello</div>
+                    </Context>
+                    <SubTitleContainer>
+                      <SubTitle style={{ borderLeft: "6px solid #5c2aab" }}>
+                        개발 인원
+                      </SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>1인 (개인 프로젝트)</div>
+                    </Context>
+                    <SubTitleContainer>
+                      <SubTitle style={{ borderLeft: "6px solid #5c2aab" }}>
+                        프로젝트 설명
+                      </SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>
+                        진행 예정, 진행 중, 완료
+                        <br />
+                        총 3가지 상태별로 메모를 할 수 있으며,
+                        <br />
+                        Drag and Drop을 이용하여
+                        <br />
+                        상태 변동이 있을 경우
+                        <br />
+                        메모 간 간편하게 이동하고 삭제할 수 있도록
+                        <br />
+                        구현하였습니다.
+                      </div>
+                    </Context>
+                    <SubTitleContainer>
+                      <SubTitle style={{ borderLeft: "6px solid #5c2aab" }}>
+                        사용 기술 스택
+                      </SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div
+                        style={{
+                          fontFamily: "'Do Hyeon'",
+                          fontSize: "0.9rem",
+                          color: "black",
+                          marginTop: "1rem",
+                        }}
+                      >
+                        <span
+                          style={{
+                            marginRight: "1.2rem",
+                            boxShadow: "none",
+                            padding: "0.4rem",
+                            borderRadius: "0.2rem",
+                            backgroundColor: "white",
+                            color: "#034cab",
+                            border: "0.0625rem solid",
+                          }}
+                        >
+                          Typescript
+                        </span>
+                        <span
+                          style={{
+                            marginRight: "1.2rem",
+                            boxShadow: "none",
+                            padding: "0.4rem",
+                            borderRadius: "0.2rem",
+                            backgroundColor: "white",
+                            color: "#01b2da",
+                            border: "0.0625rem solid",
+                          }}
+                        >
+                          React
+                        </span>
+                        <span
+                          style={{
+                            marginRight: "1.2rem",
+                            boxShadow: "none",
+                            padding: "0.4rem",
+                            borderRadius: "0.2rem",
+                            backgroundColor: "white",
+                            color: "black",
+                            border: "0.0625rem solid",
+                          }}
+                        >
+                          Recoil
+                        </span>
+                      </div>
+                    </Context>
+                    <SubTitleContainer>
+                      <SubTitle style={{ borderLeft: "6px solid #5c2aab" }}>
+                        구현 기능
+                      </SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>
+                        <li style={{ marginBottom: "-0.3rem" }}>
+                          Form Validation
+                        </li>
+                        <p style={{ marginBottom: "1rem" }}>
+                          React Hook Form을 이용하여 입력폼 빌드와 검증
+                        </p>
+                        <li style={{ marginBottom: "-0.3rem" }}>
+                          Drag and Drop
+                        </li>
+                        <p style={{ marginBottom: "1rem" }}>
+                          Beautiful DnD를 활용하여 Drag and Drop 구현
+                        </p>
+                        <li style={{ marginBottom: "-0.3rem" }}>
+                          State Management
+                        </li>
+                        <p style={{ marginBottom: "1rem" }}>
+                          Recoil atoms와 selectors를 이용하여 어플리케이션
+                          상태관리
+                        </p>
+                        <li style={{ marginBottom: "-0.3rem" }}>Dark Mode</li>
+                        <p style={{ marginBottom: "1rem" }}>다크모드 구현</p>
+                      </div>
+                    </Context>
+                    <SubTitleContainer>
+                      <SubTitle style={{ borderLeft: "6px solid #5c2aab" }}>
+                        사용한 패키지
+                      </SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>
+                        <li style={{ marginBottom: "-0.3rem" }}>Typescript</li>
+                        <li style={{ marginBottom: "-0.3rem" }}>
+                          Styled Components
+                        </li>
+                        <li style={{ marginBottom: "-0.3rem" }}>Recoil</li>
+                        <li style={{ marginBottom: "-0.3rem" }}>
+                          Beautiful DnD
+                        </li>
+                        <li style={{ marginBottom: "-0.3rem" }}>
+                          React Hook Form
+                        </li>
+                      </div>
+                    </Context>
+                  </IntroSection>
+                  <PjItrTitle style={{ color: "#5c2aab" }}>
+                    구현영상 & 상세기능 설명
+                  </PjItrTitle>
+                  <IntroSection>
+                    {/* 1 */}
+                    <SubTitleContainer>
+                      <SubTitle style={{ borderLeft: "6px solid #5c2aab" }}>
+                        메모하기
+                      </SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>
+                        [상세기능 설명]
+                        <li>
+                          진행 예정, 진행 중, 완료 상태별로 메모를 할 수
+                          있습니다.
+                        </li>
+                        <Video
+                          controls
+                          src="trello-memo.mp4"
+                          poster="trello-memo-poster.jpg"
+                        ></Video>
+                      </div>
+                    </Context>
+                    {/* 2 */}
+                    <SubTitleContainer>
+                      <SubTitle style={{ borderLeft: "6px solid #5c2aab" }}>
+                        드래그 앤 드롭
+                      </SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>
+                        [상세기능 설명]
+                        <li>메모 상태에 변동이 있을 경우</li>
+                        <p>상태를 쉽게 변경할 수 있도록</p>
+                        <p>드래그 앤 드롭을 구현하였습니다.</p>
+                      </div>
+                    </Context>
+                    <Video
+                      controls
+                      src="draganddrop.mp4"
+                      poster="trello-draganddrop-poster.jpg"
+                    ></Video>
+                    {/* 3 */}
+                    <SubTitleContainer>
+                      <SubTitle style={{ borderLeft: "6px solid #5c2aab" }}>
+                        Dark & Light Mode
+                      </SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>
+                        [상세기능 설명]
+                        <li>
+                          사용자의 편의성을 높이기 위해 DARK, LIGHT 모드를
+                          구현하였습니다.
+                        </li>
+                        <p>홈페이지 상단 헤더에서 테마변경 버튼을 클릭하여</p>
+                        <p>쉽게 테마를 변경할 수 있도록 하였습니다.</p>
+                      </div>
+                    </Context>
+                    <Video
+                      controls
+                      src="darkmode.mp4"
+                      poster="darkmode-poster.jpg"
+                    ></Video>
                   </IntroSection>
                 </TextBox>
               </TextContainer>
@@ -1982,6 +2288,96 @@ function Home() {
                       </a>
                     </div>
                   </div>
+                </div>
+              </TextContainer>
+            </Popup>
+          </PopupContainer>
+        ) : null}
+        {/* Netflix clone */}
+        {showNfxPopup ? (
+          <PopupContainer>
+            <ThcHeader>
+              <ThcTitle>
+                <Title>Netflix Clone</Title>
+                <CloseButton onClick={onNfxClosePopup}>X</CloseButton>
+              </ThcTitle>
+            </ThcHeader>
+            <Popup>
+              <TextContainer style={{ marginTop: "0" }}>
+                <div
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    backgroundColor: "white",
+                    color: "black",
+                    paddingTop: "4rem",
+                  }}
+                >
+                  <div
+                    style={{
+                      fontSize: "2rem",
+                      fontWeight: "500",
+                      padding: "1rem",
+                      fontFamily: "'Anton', sans-serif",
+                      display: "flex",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <div
+                      style={{
+                        boxShadow: " rgb(234 80 80 / 25%) 0px -15px 0px inset",
+                      }}
+                    >
+                      NETFLIX Clone Project
+                    </div>
+                  </div>
+                  <XownAbout>
+                    현재 개발중인 프로젝트입니다!
+                    <br />
+                    몰래 한 번 살펴 보시려면 아래 링크를 클릭해주세요!
+                  </XownAbout>
+                </div>
+                <div
+                  style={{
+                    height: "3rem",
+                    width: "10rem",
+                    marginTop: "1rem",
+                    alignItems: " center",
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "center",
+                  }}
+                >
+                  {/* 깃허브 바로가기 */}
+                  <a
+                    style={{
+                      width: "3.2rem",
+                      height: "3rem",
+                      marginRight: "2rem",
+                    }}
+                    href="https://github.com/xowoony/netflix-clone"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      style={{ width: "3.2rem", height: "3rem" }}
+                      src="github.jpg"
+                      alt=""
+                    />
+                  </a>
+                  {/* Netflix-clone 홈페이지 바로가기 */}
+                  {/* <a
+                      style={{ width: "2.5rem", height: "2.5rem" }}
+                      href="https://xowoony.github.io/Netflix-clone/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        style={{ width: "2.5rem", height: "2.5rem" }}
+                        src="Netflix.jpg"
+                        alt=""
+                      />
+                    </a> */}
                 </div>
               </TextContainer>
             </Popup>
