@@ -31,7 +31,6 @@ const Thc = styled.img`
   padding: 0.15rem;
 `;
 
-
 const Text = styled.div`
   font-size: 0.8rem;
   font-weight: 100;
@@ -146,6 +145,19 @@ const PjTitle = styled.h3`
   margin-top: 1.2rem;
   @media screen and (max-width: 1090px) {
     font-size: 27px;
+  }
+`;
+
+const NfxNotice = styled.div`
+  font-size: 0.8rem;
+  padding: 2rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: tomato;
+  @media screen and (max-width: 1090px) {
+    font-size: 0.5rem;
   }
 `;
 
@@ -2303,82 +2315,259 @@ function Home() {
               </ThcTitle>
             </ThcHeader>
             <Popup>
-              <TextContainer style={{ marginTop: "0" }}>
-                <div
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    backgroundColor: "white",
-                    color: "black",
-                    paddingTop: "4rem",
-                  }}
-                >
+              <TextContainer>
+                <TextBox>
+                  <PjTitle
+                    style={{
+                      boxShadow: "rgb(225, 129, 130 / 56%) 0px -15px 0px inset",
+                    }}
+                  >
+                    Netflix Clone
+                  </PjTitle>
+                  <NfxNotice>
+                    <div>현재 개발중인 프로젝트입니다!</div>
+                    <div>그래도 살펴보시려면 아래 링크를 클릭해 주세요!</div>
+                  </NfxNotice>
+
                   <div
                     style={{
-                      fontSize: "2rem",
-                      fontWeight: "500",
-                      padding: "1rem",
-                      fontFamily: "'Anton', sans-serif",
+                      height: "3rem",
+                      width: "10rem",
+                      marginTop: "1rem",
+                      alignItems: " center",
                       display: "flex",
+                      flexDirection: "row",
                       justifyContent: "center",
                     }}
                   >
-                    <div
+                    {/* 깃허브 바로가기 */}
+                    <a
                       style={{
-                        boxShadow: " rgb(234 80 80 / 25%) 0px -15px 0px inset",
+                        width: "3.2rem",
+                        height: "3rem",
+                        marginRight: "2rem",
                       }}
+                      href="https://github.com/xowoony/netflix-clone"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      NETFLIX Clone Project
-                    </div>
-                  </div>
-                  <XownAbout>
-                    현재 개발중인 프로젝트입니다!
-                    <br />
-                    몰래 한 번 살펴 보시려면 아래 링크를 클릭해주세요!
-                  </XownAbout>
-                </div>
-                <div
-                  style={{
-                    height: "3rem",
-                    width: "10rem",
-                    marginTop: "1rem",
-                    alignItems: " center",
-                    display: "flex",
-                    flexDirection: "row",
-                    justifyContent: "center",
-                  }}
-                >
-                  {/* 깃허브 바로가기 */}
-                  <a
-                    style={{
-                      width: "3.2rem",
-                      height: "3rem",
-                      marginRight: "2rem",
-                    }}
-                    href="https://github.com/xowoony/netflix-clone"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      style={{ width: "3.2rem", height: "3rem" }}
-                      src="github.jpg"
-                      alt=""
-                    />
-                  </a>
-                  {/* Netflix-clone 홈페이지 바로가기 */}
-                  {/* <a
+                      <img
+                        style={{ width: "3.2rem", height: "3rem" }}
+                        src="github.jpg"
+                        alt=""
+                      />
+                    </a>
+                    {/* Netflix-Clone 홈페이지 바로가기 */}
+                    <a
                       style={{ width: "2.5rem", height: "2.5rem" }}
-                      href="https://xowoony.github.io/Netflix-clone/"
+                      href="https://netflix-clone-xowoony.vercel.app/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       <img
                         style={{ width: "2.5rem", height: "2.5rem" }}
-                        src="Netflix.jpg"
+                        src="netflix.jpg"
                         alt=""
                       />
-                    </a> */}
-                </div>
+                    </a>
+                  </div>
+                  <EtbImage src="netflix-poster.jpg" alt="" />
+                  <PjItrTitle style={{ color: "#e78989" }}>
+                    프로젝트 소개
+                  </PjItrTitle>
+                  <IntroSection>
+                    <SubTitleContainer>
+                      <SubTitle style={{ borderLeft: "6px solid #e78989" }}>
+                        프로젝트명
+                      </SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>Netflix-Clone</div>
+                    </Context>
+                    <SubTitleContainer>
+                      <SubTitle style={{ borderLeft: "6px solid #e78989" }}>
+                        개발 인원
+                      </SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>1인 (개인 프로젝트)</div>
+                    </Context>
+                    <SubTitleContainer>
+                      <SubTitle style={{ borderLeft: "6px solid #e78989" }}>
+                        프로젝트 설명
+                      </SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>Netflix 사이트를 클론한 프로젝트입니다.</div>
+                    </Context>
+                    <SubTitleContainer>
+                      <SubTitle style={{ borderLeft: "6px solid #e78989" }}>
+                        사용 기술 스택
+                      </SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div
+                        style={{
+                          fontFamily: "'Do Hyeon'",
+                          fontSize: "0.9rem",
+                          color: "black",
+                          marginTop: "1rem",
+                        }}
+                      >
+                        <span
+                          style={{
+                            marginRight: "1.2rem",
+                            boxShadow: "none",
+                            padding: "0.4rem",
+                            borderRadius: "0.2rem",
+                            backgroundColor: "white",
+                            color: "#034cab",
+                            border: "0.0625rem solid",
+                          }}
+                        >
+                          Typescript
+                        </span>
+                        <span
+                          style={{
+                            marginRight: "1.2rem",
+                            boxShadow: "none",
+                            padding: "0.4rem",
+                            borderRadius: "0.2rem",
+                            backgroundColor: "white",
+                            color: "#01b2da",
+                            border: "0.0625rem solid",
+                          }}
+                        >
+                          React
+                        </span>
+                        <span
+                          style={{
+                            marginRight: "1.2rem",
+                            boxShadow: "none",
+                            padding: "0.4rem",
+                            borderRadius: "0.2rem",
+                            backgroundColor: "white",
+                            color: "black",
+                            border: "0.0625rem solid",
+                          }}
+                        >
+                          Recoil
+                        </span>
+                      </div>
+                    </Context>
+                    <SubTitleContainer>
+                      <SubTitle style={{ borderLeft: "6px solid #e78989" }}>
+                        구현 기능
+                      </SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>
+                        <li style={{ marginBottom: "-0.3rem" }}>Animations</li>
+                        <p style={{ marginBottom: "1rem" }}>
+                          Framer Motion을 이용하여 애니메이션과 슬라이더를 구현
+                        </p>
+                        <li style={{ marginBottom: "-0.3rem" }}>Modals</li>
+                        <p style={{ marginBottom: "1rem" }}>인터랙션 구현</p>
+                        <li style={{ marginBottom: "-0.3rem" }}>
+                          Data Fetching
+                        </li>
+                        <p style={{ marginBottom: "1rem" }}>
+                          React Query를 이용하여 movie API 데이터 fetching
+                        </p>
+                        <li style={{ marginBottom: "-0.3rem" }}>
+                          Styled Components
+                        </li>
+                        <p style={{ marginBottom: "1rem" }}>
+                          Styled Components를 이용한 디자인 시스템 확장
+                        </p>
+                      </div>
+                    </Context>
+                    <SubTitleContainer>
+                      <SubTitle style={{ borderLeft: "6px solid #e78989" }}>
+                        사용한 패키지
+                      </SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>
+                        <li style={{ marginBottom: "-0.3rem" }}>Typescript</li>
+                        <li style={{ marginBottom: "-0.3rem" }}>
+                          Styled Components
+                        </li>
+                        <li style={{ marginBottom: "-0.3rem" }}>Recoil</li>
+                        <li style={{ marginBottom: "-0.3rem" }}>React Query</li>
+                        <li style={{ marginBottom: "-0.3rem" }}>
+                          Framer Motion
+                        </li>
+                      </div>
+                    </Context>
+                  </IntroSection>
+                  {/* <PjItrTitle style={{ color: "#e78989" }}>
+                    구현영상 & 상세기능 설명
+                  </PjItrTitle> */}
+                  {/* <IntroSection> */}
+                  {/* 1 */}
+                  {/* <SubTitleContainer>
+                      <SubTitle style={{ borderLeft: "6px solid #e78989" }}>
+                        메모하기
+                      </SubTitle>
+                    </SubTitleContainer> */}
+                  {/* <Context>
+                      <div>
+                        [상세기능 설명]
+                        <li>
+                          진행 예정, 진행 중, 완료 상태별로 메모를 할 수
+                          있습니다.
+                        </li>
+                        <Video
+                          controls
+                          src="trello-memo.mp4"
+                          poster="trello-memo-poster.jpg"
+                        ></Video>
+                      </div>
+                    </Context> */}
+                  {/* 2 */}
+                  {/* <SubTitleContainer>
+                      <SubTitle style={{ borderLeft: "6px solid #e78989" }}>
+                        드래그 앤 드롭
+                      </SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>
+                        [상세기능 설명]
+                        <li>메모 상태에 변동이 있을 경우</li>
+                        <p>상태를 쉽게 변경할 수 있도록</p>
+                        <p>드래그 앤 드롭을 구현하였습니다.</p>
+                      </div>
+                    </Context> */}
+                  {/* <Video
+                      controls
+                      src="draganddrop.mp4"
+                      poster="trello-draganddrop-poster.jpg"
+                    ></Video> */}
+                  {/* 3 */}
+                  {/* <SubTitleContainer>
+                      <SubTitle style={{ borderLeft: "6px solid #e78989" }}>
+                        Dark & Light Mode
+                      </SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>
+                        [상세기능 설명]
+                        <li>
+                          사용자의 편의성을 높이기 위해 DARK, LIGHT 모드를
+                          구현하였습니다.
+                        </li>
+                        <p>홈페이지 상단 헤더에서 테마변경 버튼을 클릭하여</p>
+                        <p>쉽게 테마를 변경할 수 있도록 하였습니다.</p>
+                      </div>
+                    </Context>
+                    <Video
+                      controls
+                      src="darkmode.mp4"
+                      poster="darkmode-poster.jpg"
+                    ></Video> */}
+                  {/* </IntroSection> */}
+                </TextBox>
               </TextContainer>
             </Popup>
           </PopupContainer>
