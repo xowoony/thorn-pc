@@ -517,6 +517,15 @@ function Home() {
     setshowNfxPopup(false);
   };
 
+  // beatsByDre
+  const [showBbdPopup, setshowBbdPopup] = useState(false);
+  const onBbdDblClick = (event: React.MouseEvent<HTMLDivElement>) => {
+    setshowBbdPopup(true);
+  };
+  const onBbdClosePopup = () => {
+    setshowBbdPopup(false);
+  };
+
   // xowoony
   const [showXownPopup, setshowXownPopup] = useState(false);
   const onXownDblClick = (event: React.MouseEvent<HTMLDivElement>) => {
@@ -549,6 +558,10 @@ function Home() {
         <Item onDoubleClick={onNfxDblClick}>
           <Thc src="netflix.jpg" alt="" />
           <Text>Netflix Clone</Text>
+        </Item>
+        <Item onDoubleClick={onBbdDblClick}>
+          <Thc src="bbd.jpg" alt="" />
+          <Text style={{ textAlign: "center" }}>BeatsByDre Clone</Text>
         </Item>
         <Item onDoubleClick={onXownDblClick}>
           <Thc src="xown.jpg" alt="" />
@@ -1998,6 +2011,178 @@ function Home() {
             </Popup>
           </PopupContainer>
         ) : null}
+        {/* BeatsByDre Clone */}
+        {showBbdPopup ? (
+          <PopupContainer>
+            <ThcHeader>
+              <ThcTitle>
+                <Title>BeatsByDre Clone</Title>
+                <CloseButton onClick={onBbdClosePopup}>X</CloseButton>
+              </ThcTitle>
+            </ThcHeader>
+            <Popup>
+              <TextContainer>
+                <TextBox>
+                  <PjTitle
+                    style={{
+                      boxShadow: "#efd856c4 0px -15px 0px inset",
+                    }}
+                  >
+                    BeatsByDre Clone
+                  </PjTitle>
+                  <div
+                    style={{
+                      height: "3rem",
+                      width: "10rem",
+                      marginTop: "1rem",
+                      alignItems: " center",
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "center",
+                    }}
+                  >
+                    {/* 깃허브 바로가기 */}
+                    <a
+                      style={{
+                        width: "3.2rem",
+                        height: "3rem",
+                        marginRight: "2rem",
+                      }}
+                      href="https://github.com/xowoony/beatsbydre-clone"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        style={{ width: "3.2rem", height: "3rem" }}
+                        src="github.jpg"
+                        alt=""
+                      />
+                    </a>
+                    {/* BeatsByDre 홈페이지 바로가기 */}
+                    <a
+                      style={{ width: "2.5rem", height: "2.5rem" }}
+                      href="https://beatsbydre-clone-xowoony.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        style={{ width: "2.5rem", height: "2.5rem" }}
+                        src="bbd.jpg"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                  <EtbImage src="bbdfront.jpg" alt="" />
+                  <PjItrTitle style={{ color: "#efd856" }}>
+                    프로젝트 소개
+                  </PjItrTitle>
+                  <IntroSection>
+                    <SubTitleContainer>
+                      <SubTitle style={{ borderLeft: "6px solid #efd856" }}>
+                        프로젝트명
+                      </SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>BeatsByDre Clone</div>
+                    </Context>
+                    <SubTitleContainer>
+                      <SubTitle style={{ borderLeft: "6px solid #efd856" }}>
+                        개발 인원
+                      </SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>1인 (개인 프로젝트)</div>
+                    </Context>
+                    <SubTitleContainer>
+                      <SubTitle style={{ borderLeft: "6px solid #efd856" }}>
+                        프로젝트 설명
+                      </SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>BeatsByDre 사이트를 클론한 프로젝트입니다.</div>
+                    </Context>
+                    <SubTitleContainer>
+                      <SubTitle style={{ borderLeft: "6px solid #efd856" }}>
+                        사용 기술 스택
+                      </SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div
+                        style={{
+                          fontFamily: "'Do Hyeon'",
+                          fontSize: "0.9rem",
+                          color: "black",
+                          marginTop: "1rem",
+                        }}
+                      >
+                        <span
+                          style={{
+                            marginRight: "1.2rem",
+                            boxShadow: "none",
+                            padding: "0.4rem",
+                            borderRadius: "0.2rem",
+                            backgroundColor: "white",
+                            color: "#034cab",
+                            border: "0.0625rem solid",
+                          }}
+                        >
+                          Typescript
+                        </span>
+                        <span
+                          style={{
+                            marginRight: "1.2rem",
+                            boxShadow: "none",
+                            padding: "0.4rem",
+                            borderRadius: "0.2rem",
+                            backgroundColor: "white",
+                            color: "#01b2da",
+                            border: "0.0625rem solid",
+                          }}
+                        >
+                          React
+                        </span>
+                      </div>
+                    </Context>
+                    <SubTitleContainer>
+                      <SubTitle style={{ borderLeft: "6px solid #efd856" }}>
+                        사용한 패키지
+                      </SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>
+                        <li style={{ marginBottom: "-0.3rem" }}>Typescript</li>
+                        <li style={{ marginBottom: "-0.3rem" }}>
+                          Styled Components
+                        </li>
+                        <li style={{ marginBottom: "-0.3rem" }}>
+                          React Hook Form
+                        </li>
+                      </div>
+                    </Context>
+                  </IntroSection>
+                  <PjItrTitle style={{ color: "#efd856" }}>구현영상</PjItrTitle>
+                  <IntroSection>
+                    {/* 1 */}
+                    <SubTitleContainer>
+                      <SubTitle style={{ borderLeft: "6px solid #efd856" }}>
+                        HOME
+                      </SubTitle>
+                    </SubTitleContainer>
+                    <Context>
+                      <div>
+                        <Video
+                          controls
+                          src="bbd.mp4"
+                          poster="bbdfront.jpg"
+                        ></Video>
+                      </div>
+                    </Context>
+                  </IntroSection>
+                </TextBox>
+              </TextContainer>
+            </Popup>
+          </PopupContainer>
+        ) : null}
         {/* xowoony */}
         {showXownPopup ? (
           <PopupContainer>
@@ -2371,7 +2556,11 @@ function Home() {
                       />
                     </a>
                   </div>
-                  <EtbImage src="netflix-poster.jpg" alt="" />
+                  <EtbImage
+                    src="netflix-poster.jpg"
+                    alt=""
+                    style={{ width: "34rem", height: "16rem" }}
+                  />
                   <PjItrTitle style={{ color: "#e78989" }}>
                     프로젝트 소개
                   </PjItrTitle>
