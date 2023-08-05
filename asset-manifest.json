@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/thorn-pc/static/js/main.d6d9307f.js",
+    "main.js": "/thorn-pc/static/js/main.5d141f02.js",
     "index.html": "/thorn-pc/index.html",
-    "main.d6d9307f.js.map": "/thorn-pc/static/js/main.d6d9307f.js.map"
+    "main.5d141f02.js.map": "/thorn-pc/static/js/main.5d141f02.js.map"
   },
   "entrypoints": [
-    "static/js/main.d6d9307f.js"
+    "static/js/main.5d141f02.js"
   ]
 }
